@@ -9,4 +9,4 @@ Those are:
 
 With some more to come.
 ---
-Ale those scripts are suited for czech language and are usualy modified on the go. I do not provide any waranty that they will work without the supporting knowladge that I posses. However, my goal is to make them easily modifiable and user friendly, so anyone can benefit from those automations.
+All those scripts are suited for czech language and are usualy modified on the go. I do not provide any waranty that they will work without the supporting knowladge that I posses. However, my goal is to make them easily modifiable and user friendly, so anyone can benefit from those automations.
