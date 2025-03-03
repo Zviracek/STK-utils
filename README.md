@@ -6,6 +6,9 @@ Those are:
 - Calendar generation
 - Judo shiai importing and creating statistics
 - Generation of ranking list
+- Shiai supporting files
+  - Base Shiai template
+  - Custom quad pool system
 
 With some more to come.
 ---
