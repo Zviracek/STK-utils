@@ -9,7 +9,7 @@ Those are:
 - Shiai supporting files
   - Base Shiai template
   - Custom quad pool system
-- Script for generating kata pair distributions
+- Script for generating distributions for kata competitions
 
 With some more to come.
 ---
