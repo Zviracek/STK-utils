@@ -30,6 +30,11 @@ fn main() {
         }
         println!();
     }
+
+    let mut input = String::new();
+
+    println!("Press any key to exit...");
+    io::stdin().read_line(&mut input);
 }
 
 fn get_number_of_groups(pairs: i32) -> i32 {
