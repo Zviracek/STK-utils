@@ -1,3 +1,4 @@
 # Exclude files containing sensitive data
 Scripts/*.xlsx
 Scripts/*.csv
+Scripts/*.txt
