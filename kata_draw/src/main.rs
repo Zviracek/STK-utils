@@ -1,6 +1,15 @@
+// Prevent console window in addition to Slint window in Windows release builds when, e.g., starting the app via file manager. Ignored on other platforms.
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
 use rand::prelude::SliceRandom;
+use std::error::Error;
+
 use rand::thread_rng;
 use std::io;
+
+use slint::{ModelRc, SharedString, VecModel};
+
+slint::include_modules!();
 
 const MIN_PAIRS: i32 = 4;
 const MAX_PAIRS: i32 = 25;
@@ -9,32 +18,85 @@ const MAX_GROUPS: i32 = MAX_PAIRS / MAX_PER_GROUP;
 const MIN_ROUNDS: i32 = 2;
 const MAX_ROUNDS: i32 = 5;
 
-fn main() {
-    let num_of_pairs = get_number_in_range("Number of pairs:", MIN_PAIRS, MAX_PAIRS);
-    let num_of_rounds = get_number_in_range("Number of rounds:", MIN_ROUNDS, MAX_ROUNDS);
+fn main() -> Result<(), Box<dyn Error>> {
+    //let num_of_pairs = get_number_in_range("Number of pairs:", MIN_PAIRS, MAX_PAIRS);
+    //let num_of_rounds = get_number_in_range("Number of rounds:", MIN_ROUNDS, MAX_ROUNDS);
+    //
+    //let num_of_groups = get_number_of_groups(num_of_pairs);
+    //let pairs = distribute_pairs(num_of_pairs, num_of_groups);
+    //
+    //println!("Distribution: {:?}", pairs);
+    //println!();
+    //
+    //for i in 0..num_of_rounds {
+    //    let dist = populate_round(num_of_pairs, num_of_groups);
+    //    println!("Round {}:", i + 1);
+    //    for (j, group) in dist.iter().enumerate() {
+    //        if *group == [0; MAX_GROUPS as usize] {
+    //            break;
+    //        }
+    //        println!("Group {}: {:?}", j + 1, group);
+    //    }
+    //    println!();
+    //}
+    //
+    //let mut input = String::new();
+    //
+    //println!("Press Enter to exit...");
+    //let _ = io::stdin().read_line(&mut input);
 
-    let num_of_groups = get_number_of_groups(num_of_pairs);
-    let pairs = distribute_pairs(num_of_pairs, num_of_groups);
+    let ui = AppWindow::new()?;
 
-    println!("Distribution: {:?}", pairs);
-    println!();
+    ui.on_generate({
+        let ui_handle = ui.as_weak();
+        move || {
+            let ui = ui_handle.unwrap();
+            //ui.set_counter(ui.get_counter() + 1);
+            let num_of_pairs_str = ui.get_inputed_pairs().to_string();
+            let num_of_rounds_str = ui.get_inputed_rounds().to_string();
 
-    for i in 0..num_of_rounds {
-        let dist = populate_round(num_of_pairs, num_of_groups);
-        println!("Round {}:", i + 1);
-        for (j, group) in dist.iter().enumerate() {
-            if *group == [0; MAX_GROUPS as usize] {
-                break;
+            //println!("{}", num_of_pairs_str);
+            if num_of_pairs_str.is_empty() || num_of_rounds_str.is_empty() {
+            } else {
+                let mut num_of_pairs = num_of_pairs_str.parse::<i32>().unwrap();
+                let mut num_of_rounds = num_of_rounds_str.parse::<i32>().unwrap();
+
+                num_of_pairs = num_of_pairs.clamp(MIN_PAIRS, MAX_PAIRS);
+                num_of_rounds = num_of_rounds.clamp(MIN_ROUNDS, MAX_ROUNDS);
+
+                //println!("{}", num_of_pairs);
+                let num_of_groups = get_number_of_groups(num_of_pairs);
+                let pairs = distribute_pairs(num_of_pairs, num_of_groups);
+                let mut data =
+                    [[[0; MAX_PER_GROUP as usize]; MAX_GROUPS as usize]; MAX_ROUNDS as usize];
+                for i in 0..num_of_rounds as usize {
+                    data[i] = populate_round(num_of_pairs, num_of_groups);
+                }
+
+                let data_vec: Vec<_> = data
+                    .iter()
+                    .map(|table_layer| {
+                        let rows: Vec<_> = table_layer
+                            .iter()
+                            .map(|row| ModelRc::new(VecModel::from(row.to_vec())))
+                            .collect();
+                        ModelRc::new(VecModel::from(rows))
+                    })
+                    .collect();
+
+                ui.set_data(ModelRc::new(VecModel::from(data_vec)));
+
+                ui.set_groups(num_of_groups);
+                ui.set_rounds(num_of_rounds);
+                ui.set_inputed_pairs(SharedString::from(num_of_pairs.to_string()));
+                ui.set_inputed_rounds(SharedString::from(num_of_rounds.to_string()));
             }
-            println!("Group {}: {:?}", j + 1, group);
         }
-        println!();
-    }
+    });
 
-    let mut input = String::new();
+    ui.run()?;
 
-    println!("Press any key to exit...");
-    io::stdin().read_line(&mut input);
+    Ok(())
 }
 
 fn get_number_of_groups(pairs: i32) -> i32 {
@@ -94,7 +156,6 @@ fn populate_round(
 
 fn get_number_in_range(prompt: &str, min: i32, max: i32) -> i32 {
     loop {
-        println!();
         println!("{}", prompt);
         let mut input = String::new();
 
@@ -107,6 +168,7 @@ fn get_number_in_range(prompt: &str, min: i32, max: i32) -> i32 {
             Ok(_) => println!("Number must be between {} and {}", min, max),
             Err(_) => println!("Invalid input. Please enter a valid integer."),
         }
+        println!();
     }
 }
 

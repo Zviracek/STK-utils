@@ -1,0 +1,177 @@
+import { Button, ScrollView } from "std-widgets.slint";
+
+component RoundRow inherits Rectangle {
+    in property <int> number;
+    in property <int> groups;
+    in property <[[int]]> data;
+    min-width: 350px;
+    //height: ((num_of_groups + 1) * 60) +px;
+    background: #FFFFFF;
+    min-height: groups*30px + 40px;
+
+    // Round number header
+    Text { 
+        x:20px; y:0;
+        height: 40px;
+        text: "Kolo " + number + ":";
+        font-size: 20pt;
+        color: #000000;
+        vertical-stretch: 0;
+    }
+
+    // Group headers
+    for i in groups : Rectangle{
+        x: 0; y:(i)*30px + 40px;
+        height: 30px;
+        width: parent.width;
+        Text {
+            x: 80px;
+            text: "Skupina " + (i+1) + ":";
+            font-size: 14pt;
+            color: #000000;
+        }
+
+        for pair[idx] in data[i] : Text {
+            x: (idx + 1)*50px + 140px;
+            width: 50px;
+            text: (pair == 0 ? "-" : pair);
+            horizontal-alignment: center;
+            font-size: 14pt;
+            color: #000000;
+        }
+    }
+
+}
+
+export component AppWindow inherits Window {
+    in property <int> pairs: 4;
+    in property <int> rounds: 5;
+    in property <int> groups: 5;
+    in property <[[[int]]]> data;
+    in-out property <string> inputed_pairs: "5";
+    in-out property <string> inputed_rounds: "5";
+    callback generate();
+    callback print_to_file();
+    callback set_cz_locale();
+    callback set_en_locale();
+
+    min-width: 700px;
+
+//    MenuBar{
+//        Menu{
+//            title: @tr("File");
+//            MenuItem {
+//                title: @tr("Generate");
+//                activated => { generate(); }
+//            }
+//            MenuItem {
+//                title: @tr("Print_to_file");
+//                activated => { print_to_file(); }
+//            }
+//        }
+//        Menu{
+//            title: @tr("Language");
+//            MenuItem {
+//                title: "cz";
+//                activated => { set_cz_locale(); }
+//            }
+//            MenuItem {
+//                title: "en";
+//                activated => { set_en_locale(); }
+//            }
+//        }
+//    }
+
+    HorizontalLayout {
+        height: 100%;
+        ScrollView {
+            height: 100%;
+            VerticalLayout {
+                spacing: 1px;
+                for i in rounds : RoundRow {
+                    number: i + 1;
+                    groups: groups;
+                    data: data[i];
+                }
+            }
+        }
+        VerticalLayout {
+            width: 30%;
+            padding: 10px;
+            spacing: 10px;
+            alignment: space-between;
+            min-width: 350px;
+            VerticalLayout {
+                spacing: 10px;
+                Text {
+                    text: "Počet dvojic:";
+                    font-size: 14pt;
+                    height: 30px;
+                }
+                Rectangle {
+                    width: 100%;
+                    height: 40px;
+                    border-width: 2px;
+                    border-color: #555;
+                    background: black;
+                    border-radius: 10px; // Rounded corners
+
+                    TextInput {
+                        //width: 100% - 20px;
+                        height: 100%;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        horizontal-alignment: center;
+                        vertical-alignment: center;
+                        font-size: 14pt;
+                        text <=> inputed_pairs;
+                        input-type: number;  
+                    }
+                }
+                Text {
+                    text: "Počet kol:";
+                    font-size: 14pt;
+                    height: 30px;
+                }
+                Rectangle {
+                    width: 100%;
+                    height: 40px;
+                    border-width: 2px;
+                    border-color: #555;
+                    background: black;
+                    border-radius: 10px; // Rounded corners
+
+                    TextInput {
+                        //width: 100% - 20px;
+                        height: 100%;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        horizontal-alignment: center;
+                        vertical-alignment: center;
+                        font-size: 14pt;
+                        text <=> inputed_rounds;
+                        input-type: number;  
+                    }
+                }
+            }
+            VerticalLayout {
+                spacing: 10px;
+                Button {
+                    height: 10%;
+                    text: "Generovat";
+                    clicked => {
+                        root.generate();
+                    }
+                }
+                Button {
+                    height: 10%;
+                    text: "Tisk do souboru";
+                    clicked => {
+                        root.print_to_file();
+                    }
+                }
+            }
+        }
+    }
+}
+
