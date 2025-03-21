@@ -6,10 +6,10 @@ Those are:
 - Calendar generation
 - Judo shiai importing and creating statistics
 - Generation of ranking list
-- Shiai supporting files
+- Shai_utils - Shiai supporting files
   - Base Shiai template
   - Custom quad pool system
-- Script for generating distributions for kata competitions
+- Kata_draw - Program for generating distributions for kata competitions
 - Los_v2 - drawing for regular competitions - semi unmaintained
 
 With some more to come.
