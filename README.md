@@ -10,6 +10,7 @@ Those are:
   - Base Shiai template
   - Custom quad pool system
 - Script for generating distributions for kata competitions
+- Los_v2 - drawing for regular competitions - semi unmaintained
 
 With some more to come.
 ---
