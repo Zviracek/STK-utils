@@ -4,9 +4,9 @@ This repository contains bunch of utility scripts, that I use to automate most o
 
 Those are:
 - Calendar generation
-- Judo shiai importing and creating statistics
+- Shai_utils - Judo shiai importing and creating statistics
 - Generation of ranking list
-- Shai_utils - Shiai supporting files
+- Shiai supporting files
   - Base Shiai template
   - Custom quad pool system
 - Kata_draw - Program for generating distributions for kata competitions
