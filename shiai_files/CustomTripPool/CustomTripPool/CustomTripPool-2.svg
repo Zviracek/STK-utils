@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="CustomTripPool-2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72604517"
+     inkscape:cx="396.66954"
+     inkscape:cy="546.10927"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g498" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g498"
+       transform="matrix(0.4405613,0,0,0.4405613,2.7006088,-445.74202)">
+      <circle
+         cx="115.56773"
+         cy="1097.26"
+         r="8.3590708"
+         stroke="#000000"
+         stroke-width="1.03839"
+         fill="#ffffff"
+         id="circle493" />
+      <text
+         x="115.56773"
+         y="1101.4136"
+         style="font-size:10.3839px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.03839"
+         id="text494">15</text>
+      <text
+         x="15.881919"
+         y="1074.4154"
+         style="font-size:10.3839px;font-family:Arial;fill:#000000;stroke-width:1.03839"
+         id="text495">%m18-1-hm1-last</text>
+      <path
+         d="M 11.728343,1076.4921 H 111.383 a 4.1847273,4.1847273 0 0 1 4.18473,4.1847 v 8.2241 m -103.839387,29.127 H 111.383 a 4.1847273,4.1847273 0 0 0 4.18473,-4.1848 v -8.224"
+         style="fill:none;stroke:#000000;stroke-width:1.03839"
+         id="path496" />
+      <g
+         id="g1"
+         transform="matrix(2.2698317,0,0,2.2698317,-7.323119,1017.6036)">
+        <text
+           style="font-style:normal;font-weight:bold;font-size:8.38177px;font-family:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.392037"
+           x="104.03779"
+           y="10.701177"
+           id="text1100"><tspan
+             id="tspan1300"
+             style="stroke-width:0.392037">%i-competition %i-date %i-place %i-catname</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g503"
+       transform="matrix(0.45747615,0,0,0.45747615,-1.28186,-461.89568)">
+      <circle
+         cx="120"
+         cy="1172"
+         r="8.0500002"
+         stroke="#000000"
+         stroke-width="1"
+         fill="#ffffff"
+         id="circle498" />
+      <text
+         x="120"
+         y="1176"
+         style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+         id="text499">16</text>
+      <text
+         x="24"
+         y="1150"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text500">%m16-1-hm1-last</text>
+      <text
+         x="24"
+         y="1190"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text501">%m16-2-hm1-last</text>
+      <path
+         d="m 20,1152 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 7.92 M 20,1192 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -7.92"
+         style="fill:none;stroke:#000000;stroke-width:1"
+         id="path501" />
+      <text
+         x="122"
+         y="1156"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text502">%m16p1-1</text>
+      <text
+         x="122"
+         y="1192"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text503">%m16p2-1</text>
+    </g>
+    <g
+       id="g508"
+       transform="matrix(0.45747615,0,0,0.45747615,-1.28186,-461.89568)">
+      <circle
+         cx="228.05"
+         cy="1132"
+         r="8.0500002"
+         stroke="#000000"
+         stroke-width="1"
+         fill="#ffffff"
+         id="circle503" />
+      <text
+         x="228.05"
+         y="1136"
+         style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+         id="text504">18</text>
+      <text
+         x="132.05"
+         y="1090"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text505">%m18-1-hm1-last</text>
+      <text
+         x="132.05"
+         y="1170"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text506">%m18-2-hm1-last</text>
+      <path
+         d="m 128.05,1092 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 27.92 m -100,48.05 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -27.92"
+         style="fill:none;stroke:#000000;stroke-width:1"
+         id="path506" />
+      <text
+         x="230.05"
+         y="1096"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text507">%m18p1-1</text>
+      <text
+         x="230.05"
+         y="1172"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text508">%m18p2-1</text>
+    </g>
+    <g
+       id="g513"
+       transform="matrix(0.45747615,0,0,0.45747615,-1.28186,-461.89568)">
+      <circle
+         cx="120"
+         cy="1252"
+         r="8.0500002"
+         stroke="#000000"
+         stroke-width="1"
+         fill="#ffffff"
+         id="circle508" />
+      <text
+         x="120"
+         y="1256"
+         style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+         id="text509">17</text>
+      <text
+         x="24"
+         y="1230"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text510">%m17-1-hm1-last</text>
+      <text
+         x="24"
+         y="1270"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text511">%m17-2-hm1-last</text>
+      <path
+         d="m 20,1232 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 7.92 M 20,1272 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -7.92"
+         style="fill:none;stroke:#000000;stroke-width:1"
+         id="path511" />
+      <text
+         x="122"
+         y="1236"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text512">%m17p1-1</text>
+      <text
+         x="122"
+         y="1272"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text513">%m17p2-1</text>
+    </g>
+    <g
+       id="g518"
+       transform="matrix(0.45747615,0,0,0.45747615,-1.28186,-461.89568)">
+      <circle
+         cx="120"
+         cy="1332"
+         r="8.0500002"
+         stroke="#000000"
+         stroke-width="1"
+         fill="#ffffff"
+         id="circle513" />
+      <text
+         x="120"
+         y="1336"
+         style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+         id="text514">15</text>
+      <text
+         x="24"
+         y="1310"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text515">%m19-2-hm1-last</text>
+      <path
+         d="m 20,1312 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 7.92 M 20,1352 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -7.92"
+         style="fill:none;stroke:#000000;stroke-width:1"
+         id="path516" />
+    </g>
+    <g
+       id="g523"
+       transform="matrix(0.45747615,0,0,0.45747615,-1.28186,-461.89568)">
+      <circle
+         cx="228.05"
+         cy="1292"
+         r="8.0500002"
+         stroke="#000000"
+         stroke-width="1"
+         fill="#ffffff"
+         id="circle518" />
+      <text
+         x="228.05"
+         y="1296"
+         style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+         id="text519">19</text>
+      <text
+         x="132.05"
+         y="1250"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text520">%m19-1-hm1-last</text>
+      <text
+         x="132.05"
+         y="1330"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text521">%m19-2-hm1-last</text>
+      <path
+         d="m 128.05,1252 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 27.92 m -100,48.05 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -27.92"
+         style="fill:none;stroke:#000000;stroke-width:1"
+         id="path521" />
+      <text
+         x="230.05"
+         y="1256"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text522">%m19p1-1</text>
+      <text
+         x="230.05"
+         y="1332"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text523">%m19p2-1</text>
+      <g
+         id="g361"
+         transform="matrix(1.0122783,0,0,1.0122783,-1.5119027,451.12509)">
+        <circle
+           cx="120"
+           cy="940"
+           r="8.0500002"
+           stroke="#000000"
+           stroke-width="1"
+           fill="#ffffff"
+           id="circle356" />
+        <text
+           x="120"
+           y="944"
+           style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+           id="text357">20</text>
+        <text
+           x="24"
+           y="918"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text358">%m20-1-hm1-last</text>
+        <text
+           x="24"
+           y="958"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text359">%m20-2-hm1-last</text>
+        <path
+           d="m 20,920 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 7.92 M 20,960 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -7.92"
+           style="fill:none;stroke:#000000;stroke-width:1"
+           id="path359" />
+        <text
+           x="122"
+           y="924"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text360">%m20p1-1</text>
+        <text
+           x="122"
+           y="960"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text361">%m20p2-1</text>
+      </g>
+      <path
+         d="M 128.11033,1402.6667 H 229.33818"
+         style="fill:none;stroke:#000000;stroke-width:1.01227"
+         id="path361" />
+      <text
+         x="132.15945"
+         y="1400.642"
+         style="font-size:10.1227px;font-family:Arial;fill:#000000;stroke-width:1.01227"
+         id="text362">%m20-winner-hm1-last</text>
+      <g
+         id="g367"
+         transform="matrix(1.0122783,0,0,1.0122783,-1.5119027,451.12509)">
+        <circle
+           cx="120"
+           cy="1020"
+           r="8.0500002"
+           stroke="#000000"
+           stroke-width="1"
+           fill="#ffffff"
+           id="circle362" />
+        <text
+           x="120"
+           y="1024"
+           style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+           id="text363">21</text>
+        <text
+           x="24"
+           y="998"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text364">%m21-1-hm1-last</text>
+        <text
+           x="24"
+           y="1038"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text365">%m21-2-hm1-last</text>
+        <path
+           d="m 20,1000 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 7.92 M 20,1040 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -7.92"
+           style="fill:none;stroke:#000000;stroke-width:1"
+           id="path365" />
+        <text
+           x="122"
+           y="1004"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text366">%m21p1-1</text>
+        <text
+           x="122"
+           y="1040"
+           style="font-size:10px;font-family:Arial;fill:#000000"
+           id="text367">%m21p2-1</text>
+      </g>
+      <path
+         d="M 128.11033,1483.649 H 229.33818"
+         style="fill:none;stroke:#000000;stroke-width:1.01227"
+         id="path367" />
+      <text
+         x="132.15945"
+         y="1481.6243"
+         style="font-size:10.1227px;font-family:Arial;fill:#000000;stroke-width:1.01227"
+         id="text368">%m21-winner-hm1-last</text>
+      <text
+         x="137.27757"
+         y="1535.9227"
+         style="font-weight:bold;font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text369">%t18</text>
+      <text
+         x="33.287472"
+         y="1554.83"
+         style="font-weight:bold;font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text370">%t22</text>
+      <text
+         x="119.55202"
+         y="1554.83"
+         style="font-weight:bold;font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text371">%t6</text>
+      <text
+         x="54.558159"
+         y="1573.7373"
+         style="font-size:11.817px;font-family:Arial;fill:#000000;stroke-width:1.1817"
+         id="text372">%r1hm2-first-s-last-s-club</text>
+      <text
+         x="33.287472"
+         y="1573.7373"
+         style="font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text373">1</text>
+      <text
+         x="54.558159"
+         y="1592.6445"
+         style="font-size:11.817px;font-family:Arial;fill:#000000;stroke-width:1.1817"
+         id="text374">%r2hm2-first-s-last-s-club</text>
+      <text
+         x="33.287472"
+         y="1592.6445"
+         style="font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text375">2</text>
+      <text
+         x="54.558159"
+         y="1611.5518"
+         style="font-size:11.817px;font-family:Arial;fill:#000000;stroke-width:1.1817"
+         id="text376">%r3hm2-first-s-last-s-club</text>
+      <text
+         x="33.287472"
+         y="1611.5518"
+         style="font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text377">3</text>
+      <text
+         x="54.558159"
+         y="1630.4591"
+         style="font-size:11.817px;font-family:Arial;fill:#000000;stroke-width:1.1817"
+         id="text378">%r4hm2-first-s-last-s-club</text>
+      <text
+         x="33.287472"
+         y="1630.4591"
+         style="font-size:11.817px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:1.1817"
+         id="text379">3</text>
+      <path
+         d="M 19.106999,1540.6494 H 255.44818 v 94.5365 H 19.106999 v -94.5365"
+         style="fill:none;stroke:#000000;stroke-width:2.36342"
+         id="path379" />
+      <path
+         d="m 54.558173,1559.5567 v 75.6292"
+         style="fill:none;stroke:#000000;stroke-width:1.1817"
+         id="path380" />
+      <path
+         d="M 19.106999,1559.5567 H 255.44818"
+         style="fill:none;stroke:#000000;stroke-width:1.1817"
+         id="path381" />
+      <path
+         d="M 19.106999,1578.4639 H 255.44818"
+         style="fill:none;stroke:#000000;stroke-width:1.1817"
+         id="path382" />
+      <path
+         d="M 19.106999,1597.3714 H 255.44818"
+         style="fill:none;stroke:#000000;stroke-width:1.1817"
+         id="path383" />
+      <path
+         d="M 19.106999,1616.2786 H 255.44818"
+         style="fill:none;stroke:#000000;stroke-width:1.1817"
+         id="path384" />
+    </g>
+    <g
+       id="g528"
+       transform="matrix(0.45747615,0,0,0.45747615,-1.28186,-461.89568)">
+      <circle
+         cx="336.10001"
+         cy="1212"
+         r="8.0500002"
+         stroke="#000000"
+         stroke-width="1"
+         fill="#ffffff"
+         id="circle523" />
+      <text
+         x="336.10001"
+         y="1216"
+         style="font-size:10px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000"
+         id="text524">22</text>
+      <text
+         x="240.10001"
+         y="1130"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text525">%m22-1-hm1-last</text>
+      <text
+         x="240.10001"
+         y="1290"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text526">%m22-2-hm1-last</text>
+      <path
+         d="m 236.1,1132 h 95.97 a 4.03,4.03 0 0 1 4.03,4.03 v 67.92 m -100,88.05 h 95.97 a 4.03,4.03 0 0 0 4.03,-4.03 v -67.92"
+         style="fill:none;stroke:#000000;stroke-width:1"
+         id="path526" />
+      <text
+         x="338.10001"
+         y="1136"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text527">%m22p1-1</text>
+      <text
+         x="338.10001"
+         y="1292"
+         style="font-size:10px;font-family:Arial;fill:#000000"
+         id="text528">%m22p2-1</text>
+    </g>
+    <path
+       d="m 156.15857,92.565419 h 45.7476"
+       style="fill:none;stroke:#000000;stroke-width:0.457476"
+       id="path528" />
+    <text
+       x="157.98846"
+       y="91.650459"
+       style="font-size:4.57476px;font-family:Arial;fill:#000000;stroke-width:0.457476"
+       id="text529">%m22-winner-hm1-last</text>
+  </g>
+</svg>

@@ -1,0 +1,1692 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="8888px"
+   height="9999px"
+   id="judoshiai"
+   version="1.1"
+   sodipodi:docname="CustomTripPool-1.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs384" />
+  <style
+     type="text/css"
+     id="style1"><![CDATA[ tspan.cmpx { fill: red; } ]]></style>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.088388348"
+     inkscape:cx="2794.486"
+     inkscape:cy="3015.1033"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     showgrid="false"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="layer1"
+     style="opacity:1">
+    <text
+       style="font-style:normal;font-weight:bold;font-size:359.939px;font-family:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:16.8354"
+       x="4402.1133"
+       y="483.03134"
+       id="text1100"><tspan
+         id="tspan1300"
+         style="stroke-width:16.8354">%i-competition %i-date %i-place %i-catname</tspan></text>
+    <path
+       d="M 325.21384,903.96221 H 5191.6683 V 2066.1006 H 325.21384 V 903.96221"
+       style="fill:none;stroke:#000000;stroke-width:29.0535"
+       id="path1" />
+    <path
+       d="m 688.38208,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path2" />
+    <path
+       d="m 2431.5897,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path3" />
+    <path
+       d="m 3738.9953,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path4" />
+    <path
+       d="m 4102.1635,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path5" />
+    <path
+       d="m 4465.3318,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path6" />
+    <path
+       d="m 4828.5001,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path7" />
+    <path
+       d="M 325.21384,1136.3899 H 5191.6683"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path8" />
+    <path
+       d="M 325.21384,1368.8175 H 5191.6683"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path9" />
+    <path
+       d="M 325.21384,1601.2452 H 5191.6683"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path10" />
+    <path
+       d="M 325.21384,1833.6729 H 5191.6683"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path11" />
+    <text
+       x="2758.4412"
+       y="845.85529"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text11">%t0</text>
+    <text
+       x="506.79794"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text12">#</text>
+    <text
+       x="1559.9858"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text13">%t6</text>
+    <text
+       x="3085.2925"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text14">%t8</text>
+    <text
+       x="3920.5796"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text15">1</text>
+    <text
+       x="4283.7476"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text16">2</text>
+    <text
+       x="4646.9155"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text17">3</text>
+    <text
+       x="5010.0845"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text18">4</text>
+    <text
+       x="506.79794"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text19">1</text>
+    <text
+       x="775.54248"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text20">%c1first-s-last</text>
+    <text
+       x="2518.75"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text21">%c1club</text>
+    <text
+       x="4283.7476"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text22">%m1p1</text>
+    <text
+       x="4646.9155"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text23">%m2p1</text>
+    <text
+       x="5010.0845"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text24">%m3p1</text>
+    <text
+       x="506.79794"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text25">2</text>
+    <text
+       x="775.54248"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text26">%c2first-s-last</text>
+    <text
+       x="2518.75"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text27">%c2club</text>
+    <text
+       x="3920.5796"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text28">%m1p2</text>
+    <text
+       x="4646.9155"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text29">%m4p1</text>
+    <text
+       x="5010.0845"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text30">%m5p1</text>
+    <text
+       x="506.79794"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text31">3</text>
+    <text
+       x="775.54248"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text32">%c3first-s-last</text>
+    <text
+       x="2518.75"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text33">%c3club</text>
+    <text
+       x="3920.5796"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text34">%m2p2</text>
+    <text
+       x="4283.7476"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text35">%m4p2</text>
+    <text
+       x="5010.0845"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text36">%m6p1</text>
+    <text
+       x="506.79794"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text37">4</text>
+    <text
+       x="775.54248"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text38">%c4first-s-last</text>
+    <text
+       x="2518.75"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text39">%c4club</text>
+    <text
+       x="3920.5796"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text40">%m3p2</text>
+    <text
+       x="4283.7476"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text41">%m5p2</text>
+    <text
+       x="4646.9155"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text42">%m6p2</text>
+    <path
+       d="M 5191.6683,903.96221 H 6281.173 V 2066.1006 H 5191.6683 V 903.96221"
+       style="fill:none;stroke:#000000;stroke-width:29.0535"
+       id="path42" />
+    <path
+       d="m 5554.8365,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path43" />
+    <path
+       d="m 5918.0047,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path44" />
+    <path
+       d="m 6281.173,1136.3899 v 929.7107"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path45" />
+    <path
+       d="M 5191.6683,1136.3899 H 6281.173"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path46" />
+    <path
+       d="M 5191.6683,1368.8175 H 6281.173"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path47" />
+    <path
+       d="M 5191.6683,1601.2452 H 6281.173"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path48" />
+    <path
+       d="M 5191.6683,1833.6729 H 6281.173"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path49" />
+    <text
+       x="5373.2524"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text49">Wins</text>
+    <text
+       x="5736.4204"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text50">Pts</text>
+    <text
+       x="6099.5889"
+       y="1078.283"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text51">%t22</text>
+    <text
+       x="5373.2524"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text52">%c1w</text>
+    <text
+       x="5736.4204"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text53">%c1p</text>
+    <text
+       x="6099.5889"
+       y="1310.7104"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text54">%c1r</text>
+    <text
+       x="5373.2524"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text55">%c2w</text>
+    <text
+       x="5736.4204"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text56">%c2p</text>
+    <text
+       x="6099.5889"
+       y="1543.1383"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text57">%c2r</text>
+    <text
+       x="5373.2524"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text58">%c3w</text>
+    <text
+       x="5736.4204"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text59">%c3p</text>
+    <text
+       x="6099.5889"
+       y="1775.5659"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text60">%c3r</text>
+    <text
+       x="5373.2524"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text61">%c4w</text>
+    <text
+       x="5736.4204"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text62">%c4p</text>
+    <text
+       x="6099.5889"
+       y="2007.9937"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text63">%c4r</text>
+    <path
+       d="M 336.36476,2198.0805 H 6297.4008 V 3806.842 H 336.36476 V 2198.0805"
+       style="fill:none;stroke:#000000;stroke-width:28.7279"
+       id="path63" />
+    <path
+       d="M 695.46332,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path64" />
+    <path
+       d="M 2419.1365,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path65" />
+    <path
+       d="M 2778.235,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path66" />
+    <path
+       d="M 3137.3335,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path67" />
+    <path
+       d="M 4861.0066,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path68" />
+    <path
+       d="M 5579.2038,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path69" />
+    <path
+       d="M 6297.4008,2427.9036 V 3806.842"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path70" />
+    <path
+       d="M 336.36476,2427.9036 H 6297.4008"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path71" />
+    <path
+       d="M 336.36476,2657.7266 H 6297.4008"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path72" />
+    <path
+       d="M 336.36476,2887.5497 H 6297.4008"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path73" />
+    <path
+       d="M 336.36476,3117.3727 H 6297.4008"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path74" />
+    <path
+       d="M 336.36476,3347.1958 H 6297.4008"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path75" />
+    <path
+       d="M 336.36476,3577.0189 H 6297.4008"
+       style="fill:none;stroke:#000000;stroke-width:14.3639"
+       id="path76" />
+    <text
+       x="515.914"
+       y="2370.448"
+       style="font-weight:bold;font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text76">%t14</text>
+    <text
+       x="1557.2998"
+       y="2370.448"
+       style="font-weight:bold;font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text77">%t16</text>
+    <text
+       x="177.50"
+       y="208.00"
+       style="font-size:10px;font-family:Arial;fill:#000000;font-weight:bold;text-anchor:middle;text-align:center"
+       id="text78" />
+    <text
+       x="202.50"
+       y="208.00"
+       style="font-size:10px;font-family:Arial;fill:#000000;font-weight:bold;text-anchor:middle;text-align:center"
+       id="text79" />
+    <text
+       x="3999.1699"
+       y="2370.448"
+       style="font-weight:bold;font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text80">%t15</text>
+    <text
+       x="5220.105"
+       y="2370.448"
+       style="font-weight:bold;font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text81">%t17</text>
+    <text
+       x="5938.3018"
+       y="2370.448"
+       style="font-weight:bold;font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text82">%t19</text>
+    <text
+       x="515.914"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text83">1</text>
+    <text
+       x="781.64703"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text84">%m1-1-first-s-last</text>
+    <text
+       x="3223.5171"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text85">%m1-2-first-s-last</text>
+    <text
+       x="2598.6858"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text86">1</text>
+    <text
+       x="2957.7844"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text87">2</text>
+    <text
+       x="5220.105"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text88">%m1p1 - %m1p2</text>
+    <text
+       x="5938.3018"
+       y="2600.271"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text89">%m1time</text>
+    <text
+       x="515.914"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text90">2</text>
+    <text
+       x="781.64703"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text91">%m2-1-first-s-last</text>
+    <text
+       x="3223.5171"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text92">%m2-2-first-s-last</text>
+    <text
+       x="2598.6858"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text93">1</text>
+    <text
+       x="2957.7844"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text94">3</text>
+    <text
+       x="5220.105"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text95">%m2p1 - %m2p2</text>
+    <text
+       x="5938.3018"
+       y="2830.094"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text96">%m2time</text>
+    <text
+       x="515.914"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text97">3</text>
+    <text
+       x="781.64703"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text98">%m3-1-first-s-last</text>
+    <text
+       x="3223.5171"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text99">%m3-2-first-s-last</text>
+    <text
+       x="2598.6858"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text100">1</text>
+    <text
+       x="2957.7844"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text101">4</text>
+    <text
+       x="5220.105"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text102">%m3p1 - %m3p2</text>
+    <text
+       x="5938.3018"
+       y="3059.9172"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text103">%m3time</text>
+    <text
+       x="515.914"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text104">4</text>
+    <text
+       x="781.64703"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text105">%m4-1-first-s-last</text>
+    <text
+       x="3223.5171"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text106">%m4-2-first-s-last</text>
+    <text
+       x="2598.6858"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text107">2</text>
+    <text
+       x="2957.7844"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text108">3</text>
+    <text
+       x="5220.105"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text109">%m4p1 - %m4p2</text>
+    <text
+       x="5938.3018"
+       y="3289.74"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text110">%m4time</text>
+    <text
+       x="515.914"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text111">5</text>
+    <text
+       x="781.64703"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text112">%m5-1-first-s-last</text>
+    <text
+       x="3223.5171"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text113">%m5-2-first-s-last</text>
+    <text
+       x="2598.6858"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text114">2</text>
+    <text
+       x="2957.7844"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text115">4</text>
+    <text
+       x="5220.105"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text116">%m5p1 - %m5p2</text>
+    <text
+       x="5938.3018"
+       y="3519.5632"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text117">%m5time</text>
+    <text
+       x="515.914"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text118">6</text>
+    <text
+       x="781.64703"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text119">%m6-1-first-s-last</text>
+    <text
+       x="3223.5171"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;fill:#000000;stroke-width:14.3639"
+       id="text120">%m6-2-first-s-last</text>
+    <text
+       x="2598.6858"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text121">3</text>
+    <text
+       x="2957.7844"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text122">4</text>
+    <text
+       x="5220.105"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text123">%m6p1 - %m6p2</text>
+    <text
+       x="5938.3018"
+       y="3749.3862"
+       style="font-size:143.639px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.3639"
+       id="text124">%m6time</text>
+    <path
+       d="M 326.9434,4103.4027 H 5211.7963 V 5269.9348 H 326.9434 V 4103.4027"
+       style="fill:none;stroke:#000000;stroke-width:29.1633"
+       id="path124" />
+    <path
+       d="m 691.48466,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path125" />
+    <path
+       d="m 2441.2828,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path126" />
+    <path
+       d="m 3753.6312,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path127" />
+    <path
+       d="m 4118.1725,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path128" />
+    <path
+       d="m 4482.7137,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path129" />
+    <path
+       d="m 4847.2551,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path130" />
+    <path
+       d="M 326.9434,4336.7092 H 5211.7963"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path131" />
+    <path
+       d="M 326.9434,4570.0156 H 5211.7963"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path132" />
+    <path
+       d="M 326.9434,4803.322 H 5211.7963"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path133" />
+    <path
+       d="M 326.9434,5036.6285 H 5211.7963"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path134" />
+    <text
+       x="2769.3699"
+       y="4045.0762"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text134">%t0</text>
+    <text
+       x="509.21402"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text135">#</text>
+    <text
+       x="1566.3837"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text136">%t6</text>
+    <text
+       x="3097.4573"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text137">%t8</text>
+    <text
+       x="3935.9019"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text138">1</text>
+    <text
+       x="4300.4434"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text139">2</text>
+    <text
+       x="4664.9844"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text140">3</text>
+    <text
+       x="5029.5259"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text141">4</text>
+    <text
+       x="509.21402"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text142">5</text>
+    <text
+       x="778.97449"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text143">%c5first-s-last</text>
+    <text
+       x="2528.7727"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text144">%c5club</text>
+    <text
+       x="4300.4434"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text145">%m7p1</text>
+    <text
+       x="4664.9844"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text146">%m8p1</text>
+    <text
+       x="5029.5259"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text147">%m9p1</text>
+    <text
+       x="509.21402"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text148">6</text>
+    <text
+       x="778.97449"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text149">%c6first-s-last</text>
+    <text
+       x="2528.7727"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text150">%c6club</text>
+    <text
+       x="3935.9019"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text151">%m7p2</text>
+    <text
+       x="4664.9844"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text152">%m10p1</text>
+    <text
+       x="5029.5259"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text153">%m11p1</text>
+    <text
+       x="509.21402"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text154">7</text>
+    <text
+       x="778.97449"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text155">%c7first-s-last</text>
+    <text
+       x="2528.7727"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text156">%c7club</text>
+    <text
+       x="3935.9019"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text157">%m8p2</text>
+    <text
+       x="4300.4434"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text158">%m10p2</text>
+    <text
+       x="5029.5259"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text159">%m12p1</text>
+    <text
+       x="509.21402"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text160">8</text>
+    <text
+       x="778.97449"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text161">%c8first-s-last</text>
+    <text
+       x="2528.7727"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;fill:#000000;stroke-width:14.5816"
+       id="text162">%c8club</text>
+    <text
+       x="3935.9019"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text163">%m9p2</text>
+    <text
+       x="4300.4434"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text164">%m11p2</text>
+    <text
+       x="4664.9844"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text165">%m12p2</text>
+    <path
+       d="M 5211.7963,4103.4027 H 6305.4201 V 5269.9348 H 5211.7963 V 4103.4027"
+       style="fill:none;stroke:#000000;stroke-width:29.1633"
+       id="path165" />
+    <path
+       d="m 5576.3376,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path166" />
+    <path
+       d="m 5940.8789,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path167" />
+    <path
+       d="m 6305.4201,4336.7092 v 933.2256"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path168" />
+    <path
+       d="M 5211.7963,4336.7092 H 6305.4201"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path169" />
+    <path
+       d="M 5211.7963,4570.0156 H 6305.4201"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path170" />
+    <path
+       d="M 5211.7963,4803.322 H 6305.4201"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path171" />
+    <path
+       d="M 5211.7963,5036.6285 H 6305.4201"
+       style="fill:none;stroke:#000000;stroke-width:14.5816"
+       id="path172" />
+    <text
+       x="5394.0674"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text172">Wins</text>
+    <text
+       x="5758.6084"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text173">Pts</text>
+    <text
+       x="6123.1494"
+       y="4278.3828"
+       style="font-weight:bold;font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text174">%t22</text>
+    <text
+       x="5394.0674"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text175">%c5w</text>
+    <text
+       x="5758.6084"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text176">%c5p</text>
+    <text
+       x="6123.1494"
+       y="4511.689"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text177">%c5r</text>
+    <text
+       x="5394.0674"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text178">%c6w</text>
+    <text
+       x="5758.6084"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text179">%c6p</text>
+    <text
+       x="6123.1494"
+       y="4744.9956"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text180">%c6r</text>
+    <text
+       x="5394.0674"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text181">%c7w</text>
+    <text
+       x="5758.6084"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text182">%c7p</text>
+    <text
+       x="6123.1494"
+       y="4978.3018"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text183">%c7r</text>
+    <text
+       x="5394.0674"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text184">%c8w</text>
+    <text
+       x="5758.6084"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text185">%c8p</text>
+    <text
+       x="6123.1494"
+       y="5211.6079"
+       style="font-size:145.816px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5816"
+       id="text186">%c8r</text>
+    <path
+       d="m 320.3632,5395.4267 h 5987.407 V 7011.3051 H 320.3632 V 5395.4267"
+       style="fill:none;stroke:#000000;stroke-width:28.855"
+       id="path186" />
+    <path
+       d="M 681.05036,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path187" />
+    <path
+       d="M 2412.3488,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path188" />
+    <path
+       d="M 2773.0359,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path189" />
+    <path
+       d="M 3133.7232,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path190" />
+    <path
+       d="M 4865.0216,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path191" />
+    <path
+       d="M 5586.3958,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path192" />
+    <path
+       d="M 6307.7702,5626.2665 V 7011.3051"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path193" />
+    <path
+       d="m 320.3632,5626.2665 h 5987.407"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path194" />
+    <path
+       d="m 320.3632,5857.1063 h 5987.407"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path195" />
+    <path
+       d="m 320.3632,6087.9461 h 5987.407"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path196" />
+    <path
+       d="m 320.3632,6318.7858 h 5987.407"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path197" />
+    <path
+       d="m 320.3632,6549.6256 h 5987.407"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path198" />
+    <path
+       d="m 320.3632,6780.4654 h 5987.407"
+       style="fill:none;stroke:#000000;stroke-width:14.4275"
+       id="path199" />
+    <text
+       x="500.70679"
+       y="5568.5566"
+       style="font-weight:bold;font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text199">%t14</text>
+    <text
+       x="1546.6996"
+       y="5568.5566"
+       style="font-weight:bold;font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text200">%t16</text>
+    <text
+       x="177.50"
+       y="456.00"
+       style="font-size:10px;font-family:Arial;fill:#000000;font-weight:bold;text-anchor:middle;text-align:center"
+       id="text201" />
+    <text
+       x="202.50"
+       y="456.00"
+       style="font-size:10px;font-family:Arial;fill:#000000;font-weight:bold;text-anchor:middle;text-align:center"
+       id="text202" />
+    <text
+       x="3999.3723"
+       y="5568.5566"
+       style="font-weight:bold;font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text203">%t15</text>
+    <text
+       x="5225.7085"
+       y="5568.5566"
+       style="font-weight:bold;font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text204">%t17</text>
+    <text
+       x="5947.083"
+       y="5568.5566"
+       style="font-weight:bold;font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text205">%t19</text>
+    <text
+       x="500.70679"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text206">7</text>
+    <text
+       x="767.61523"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text207">%m7-1-first-s-last</text>
+    <text
+       x="3220.2878"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text208">%m7-2-first-s-last</text>
+    <text
+       x="2592.6924"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text209">5</text>
+    <text
+       x="2953.3796"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text210">6</text>
+    <text
+       x="5225.7085"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text211">%m7p1 - %m7p2</text>
+    <text
+       x="5947.083"
+       y="5799.3965"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text212">%m7time</text>
+    <text
+       x="500.70679"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text213">8</text>
+    <text
+       x="767.61523"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text214">%m8-1-first-s-last</text>
+    <text
+       x="3220.2878"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text215">%m8-2-first-s-last</text>
+    <text
+       x="2592.6924"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text216">5</text>
+    <text
+       x="2953.3796"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text217">7</text>
+    <text
+       x="5225.7085"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text218">%m8p1 - %m8p2</text>
+    <text
+       x="5947.083"
+       y="6030.2363"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text219">%m8time</text>
+    <text
+       x="500.70679"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text220">9</text>
+    <text
+       x="767.61523"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text221">%m9-1-first-s-last</text>
+    <text
+       x="3220.2878"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text222">%m9-2-first-s-last</text>
+    <text
+       x="2592.6924"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text223">5</text>
+    <text
+       x="2953.3796"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text224">8</text>
+    <text
+       x="5225.7085"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text225">%m9p1 - %m9p2</text>
+    <text
+       x="5947.083"
+       y="6261.0757"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text226">%m9time</text>
+    <text
+       x="500.70679"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text227">10</text>
+    <text
+       x="767.61523"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text228">%m10-1-first-s-last</text>
+    <text
+       x="3220.2878"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text229">%m10-2-first-s-last</text>
+    <text
+       x="2592.6924"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text230">6</text>
+    <text
+       x="2953.3796"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text231">7</text>
+    <text
+       x="5225.7085"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text232">%m10p1 - %m10p2</text>
+    <text
+       x="5947.083"
+       y="6491.9155"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text233">%m10time</text>
+    <text
+       x="500.70679"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text234">11</text>
+    <text
+       x="767.61523"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text235">%m11-1-first-s-last</text>
+    <text
+       x="3220.2878"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text236">%m11-2-first-s-last</text>
+    <text
+       x="2592.6924"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text237">6</text>
+    <text
+       x="2953.3796"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text238">8</text>
+    <text
+       x="5225.7085"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text239">%m11p1 - %m11p2</text>
+    <text
+       x="5947.083"
+       y="6722.7554"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text240">%m11time</text>
+    <text
+       x="500.70679"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text241">12</text>
+    <text
+       x="767.61523"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text242">%m12-1-first-s-last</text>
+    <text
+       x="3220.2878"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;fill:#000000;stroke-width:14.4275"
+       id="text243">%m12-2-first-s-last</text>
+    <text
+       x="2592.6924"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text244">7</text>
+    <text
+       x="2953.3796"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text245">8</text>
+    <text
+       x="5225.7085"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text246">%m12p1 - %m12p2</text>
+    <text
+       x="5947.083"
+       y="6953.5957"
+       style="font-size:144.275px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.4275"
+       id="text247">%m12time</text>
+    <path
+       d="M 298.94361,7288.4051 H 5145.8924 V 8289.0655 H 298.94361 V 7288.4051"
+       style="fill:none;stroke:#000000;stroke-width:31.2707"
+       id="path247" />
+    <path
+       d="m 689.82658,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path248" />
+    <path
+       d="m 2566.0648,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path249" />
+    <path
+       d="m 3973.2435,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path250" />
+    <path
+       d="m 4364.1265,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path251" />
+    <path
+       d="m 4755.0095,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path252" />
+    <path
+       d="M 298.94361,7538.5703 H 5145.8924"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path253" />
+    <path
+       d="M 298.94361,7788.7353 H 5145.8924"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path254" />
+    <path
+       d="M 298.94361,8038.9004 H 5145.8924"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path255" />
+    <text
+       x="2722.4182"
+       y="7225.8643"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text255">%t0</text>
+    <text
+       x="494.38507"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text256">#</text>
+    <text
+       x="1627.9458"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text257">%t6</text>
+    <text
+       x="3269.6541"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text258">%t8</text>
+    <text
+       x="4168.6851"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text259">1</text>
+    <text
+       x="4559.5684"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text260">2</text>
+    <text
+       x="4950.4512"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text261">3</text>
+    <text
+       x="494.38507"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text262">9</text>
+    <text
+       x="783.63843"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;fill:#000000;stroke-width:15.6353"
+       id="text263">%c9first-s-last</text>
+    <text
+       x="2659.8767"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;fill:#000000;stroke-width:15.6353"
+       id="text264">%c9club</text>
+    <text
+       x="4559.5684"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text265">%m13p1</text>
+    <text
+       x="4950.4512"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text266">%m14p1</text>
+    <text
+       x="494.38507"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text267">10</text>
+    <text
+       x="783.63843"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;fill:#000000;stroke-width:15.6353"
+       id="text268">%c10first-s-last</text>
+    <text
+       x="2659.8767"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;fill:#000000;stroke-width:15.6353"
+       id="text269">%c10club</text>
+    <text
+       x="4168.6851"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text270">%m13p2</text>
+    <text
+       x="4950.4512"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text271">%m15p1</text>
+    <text
+       x="494.38507"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text272">11</text>
+    <text
+       x="783.63843"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;fill:#000000;stroke-width:15.6353"
+       id="text273">%c11first-s-last</text>
+    <text
+       x="2659.8767"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;fill:#000000;stroke-width:15.6353"
+       id="text274">%c11club</text>
+    <text
+       x="4168.6851"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text275">%m14p2</text>
+    <text
+       x="4559.5684"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text276">%m15p2</text>
+    <path
+       d="M 5145.8924,7288.4051 H 6318.5413 V 8289.0655 H 5145.8924 V 7288.4051"
+       style="fill:none;stroke:#000000;stroke-width:31.2707"
+       id="path276" />
+    <path
+       d="m 5536.7754,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path277" />
+    <path
+       d="m 5927.6583,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path278" />
+    <path
+       d="m 6318.5413,7538.5703 v 750.4952"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path279" />
+    <path
+       d="M 5145.8924,7538.5703 H 6318.5413"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path280" />
+    <path
+       d="M 5145.8924,7788.7353 H 6318.5413"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path281" />
+    <path
+       d="M 5145.8924,8038.9004 H 6318.5413"
+       style="fill:none;stroke:#000000;stroke-width:15.6353"
+       id="path282" />
+    <text
+       x="5341.3335"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text282">Wins</text>
+    <text
+       x="5732.2173"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text283">Pts</text>
+    <text
+       x="6123.1001"
+       y="7476.0293"
+       style="font-weight:bold;font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text284">%t22</text>
+    <text
+       x="5341.3335"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text285">%c9w</text>
+    <text
+       x="5732.2173"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text286">%c9p</text>
+    <text
+       x="6123.1001"
+       y="7726.1938"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text287">%c9r</text>
+    <text
+       x="5341.3335"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text288">%c10w</text>
+    <text
+       x="5732.2173"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text289">%c10p</text>
+    <text
+       x="6123.1001"
+       y="7976.3594"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text290">%c10r</text>
+    <text
+       x="5341.3335"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text291">%c11w</text>
+    <text
+       x="5732.2173"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text292">%c11p</text>
+    <text
+       x="6123.1001"
+       y="8226.5244"
+       style="font-size:156.353px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:15.6353"
+       id="text293">%c11r</text>
+    <path
+       d="M 291.40898,8426.8609 H 6320.0018 v 929.7108 H 291.40898 v -929.7108"
+       style="fill:none;stroke:#000000;stroke-width:29.0535"
+       id="path293" />
+    <path
+       d="m 654.57722,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path294" />
+    <path
+       d="m 2397.7848,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path295" />
+    <path
+       d="m 2760.953,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path296" />
+    <path
+       d="m 3124.1213,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path297" />
+    <path
+       d="m 4867.3289,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path298" />
+    <path
+       d="m 5593.6653,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path299" />
+    <path
+       d="m 6320.0018,8659.2886 v 697.2831"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path300" />
+    <path
+       d="M 291.40898,8659.2886 H 6320.0018"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path301" />
+    <path
+       d="M 291.40898,8891.7163 H 6320.0018"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path302" />
+    <path
+       d="M 291.40898,9124.144 H 6320.0018"
+       style="fill:none;stroke:#000000;stroke-width:14.5267"
+       id="path303" />
+    <text
+       x="472.99313"
+       y="8601.1816"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text303">%t14</text>
+    <text
+       x="1526.1809"
+       y="8601.1816"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text304">%t16</text>
+    <text
+       x="177.50"
+       y="688.00"
+       style="font-size:10px;font-family:Arial;fill:#000000;font-weight:bold;text-anchor:middle;text-align:center"
+       id="text305" />
+    <text
+       x="202.50"
+       y="688.00"
+       style="font-size:10px;font-family:Arial;fill:#000000;font-weight:bold;text-anchor:middle;text-align:center"
+       id="text306" />
+    <text
+       x="3995.7251"
+       y="8601.1816"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text307">%t15</text>
+    <text
+       x="5230.4971"
+       y="8601.1816"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text308">%t17</text>
+    <text
+       x="5956.834"
+       y="8601.1816"
+       style="font-weight:bold;font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text309">%t19</text>
+    <text
+       x="472.99313"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text310">13</text>
+    <text
+       x="741.73761"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text311">%m13-1-first-s-last</text>
+    <text
+       x="3211.2817"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text312">%m13-2-first-s-last</text>
+    <text
+       x="2579.3689"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text313">9</text>
+    <text
+       x="2942.5371"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text314">10</text>
+    <text
+       x="5230.4971"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text315">%m13p1 - %m13p2</text>
+    <text
+       x="5956.834"
+       y="8833.6094"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text316">%m13time</text>
+    <text
+       x="472.99313"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text317">14</text>
+    <text
+       x="741.73761"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text318">%m14-1-first-s-last</text>
+    <text
+       x="3211.2817"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text319">%m14-2-first-s-last</text>
+    <text
+       x="2579.3689"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text320">9</text>
+    <text
+       x="2942.5371"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text321">11</text>
+    <text
+       x="5230.4971"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text322">%m14p1 - %m14p2</text>
+    <text
+       x="5956.834"
+       y="9066.0371"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text323">%m14time</text>
+    <text
+       x="472.99313"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text324">15</text>
+    <text
+       x="741.73761"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text325">%m15-1-first-s-last</text>
+    <text
+       x="3211.2817"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;fill:#000000;stroke-width:14.5267"
+       id="text326">%m15-2-first-s-last</text>
+    <text
+       x="2579.3689"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text327">10</text>
+    <text
+       x="2942.5371"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text328">11</text>
+    <text
+       x="5230.4971"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text329">%m15p1 - %m15p2</text>
+    <text
+       x="5956.834"
+       y="9298.4648"
+       style="font-size:145.267px;font-family:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke-width:14.5267"
+       id="text330">%m15time</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+info "Custom Trip Pool" "custom_trip_pool" 9 11
+
+svg page 1
+
+rr pool_a: c1 c2 c3 c4
+rr pool_b: c5 c6 c7 c8
+rr pool_c: c9 c10 c11
+
+svg page 2
+
+quart_a: pool_b.1 pool_c.2
+quart_b: pool_c.1 pool_a.2
+
+semi_a: pool_a.1 quart_a.1 
+semi_b: quart_b.1 pool_b.2
+
+bronze_1: semi_a.2 semi_b.1.p.2
+bronze_2: semi_b.2 semi_a.1.p.2
+final: semi_a.1 semi_b.1
+
+pos1 final.1
+pos2 final.2
+pos3 bronze_1.1
+pos4 bronze_2.1 3

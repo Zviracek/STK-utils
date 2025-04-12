@@ -1,0 +1,22 @@
+info "Custom Quad Pool" "custom_quad_pool" 13 16
+
+svg page 1
+
+rr pool_a: c1 c2 c3 c4
+rr pool_b: c5 c6 c7 c8
+rr pool_c: c9 c10 c11 c12
+rr pool_d: c13 c14 c15 c16
+
+svg page 2
+
+ko ko_pool: pool_a.1 pool_d.2 pool_b.1 pool_c.2 pool_c.1 pool_a.2 pool_d.1 pool_b.2
+
+svg page 3
+
+bronze_1: ko_pool_2_1.1.p.2 ko_pool_2_2.1.p.2
+bronze_2: ko_pool_2_1.2 ko_pool_2_2.2
+
+pos1 ko_pool.1
+pos2 ko_pool.2
+pos3 bronze_1.1 
+pos4 bronze_2.1 3
