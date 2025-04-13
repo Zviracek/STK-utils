@@ -1,3 +1,11 @@
+# This script takes exports from database of registered and all competitors.
+# From the latter, which contains more informations, filters ids from the former.
+# It basicaly works only for this specific use case. 
+# The .xlsx and .csv files are under gitignore for obvious reasons.
+
+# This script requires modifications almost every time it is used, 
+# cause export formats changes a lot for reasons unknown.
+
 import pandas as pd
 import tkinter as tk
 from tkinter import filedialog as fd
