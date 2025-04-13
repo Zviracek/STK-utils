@@ -39,11 +39,15 @@ evid = pd.read_excel(filename, index_col='UID')
 filtered_cols = get_filters()
 print(filtered_cols)
 
+# Create one DF with information according to file with registered competitors
+# Split age category column to long name and shortcut
 merged_df = pd.merge(evid, registered, how='inner', left_index=True, right_index=True)
 filtered_df = merged_df.loc[merged_df.index.isin(registered.index)]
 print(filtered_df)
 filtered_df[['Garbage', 'Věková kategorie']] = filtered_df['Věková kategorie_y'].str.rsplit(n=1, expand=True)
 
+# Filter information according to filters set by user
+# Save DF to file
 filtered_df = filtered_df[filtered_cols]
 print(filtered_df)
 filtered_df.to_csv(fd.asksaveasfilename(parent=root, title="Uložit import závodníků jako CSV", defaultextension=".csv", filetypes=[("CSV files", "*.csv")]))
