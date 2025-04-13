@@ -11,7 +11,7 @@ import tkinter as tk
 from tkinter import filedialog as fd
 
 def get_filters():
-    use_default_filters = input("Použít defaultní filtry (Věková kat, Váhová kat, Pohlaví, Jméno, Přijímení, Klub, Rok narození, ID člena)?\n-> Y,y / N,n: ").strip()
+    use_default_filters = input("Použít defaultní filtry (Věková kat, Váhová kat, Pohlaví, Jméno, Příjmení, Klub, Rok narození, ID člena)?\n-> Y,y / N,n: ").strip()
     if (use_default_filters not in ['Y', 'y', 'N', 'n']):
         get_filters()
     elif (use_default_filters in ['Y', 'y']):
