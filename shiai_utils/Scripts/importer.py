@@ -13,7 +13,8 @@ from tkinter import filedialog as fd
 def get_filters():
     use_default_filters = input("Použít defaultní filtry (Věková kat, Váhová kat, Pohlaví, Jméno, Příjmení, Klub, Rok narození, ID člena)?\n-> Y,y / N,n: ").strip()
     if (use_default_filters not in ['Y', 'y', 'N', 'n']):
-        get_filters()
+        # there probably should be some recursion limit, but I expect somewhat competent user
+        return get_filters()
     elif (use_default_filters in ['Y', 'y']):
         return ['Věková kategorie', 'Váhová kategorie', 'Pohlaví', 'Jméno', 'Příjmení', 'Klub_x', 'Rok narození', 'ID člena_x']
     else:
