@@ -30,6 +30,13 @@ with open(filename, 'r', encoding="utf8") as f:
     ff = json.loads(string)
     frame = pd.DataFrame(ff)
 
+    # Find mistakes in club names (too long names are sometimes cut) and replace them with correct name (if present in the data)
+    clubs = frame['club'].drop_duplicates()
+    for club in clubs:
+        for club2 in clubs:
+            if club in club2 and club != club2:
+                frame.loc[frame['club'] == club, 'club'] = club2
+
 with open(fd.asksaveasfilename(parent=root, title="Uložit výsledky to txt souboru", defaultextension=".txt", filetypes=[("Text Files", "*.txt")]), "w", encoding="utf8") as f:
     # Competitors
     print(frame)
@@ -132,6 +139,7 @@ with open(fd.asksaveasfilename(parent=root, title="Uložit výsledky to txt soub
     while not fee.isnumeric():
         fee = input("Zadejte výši startovného za jednu osobu v Kč: ").strip()
     fee = int(fee)
+    print()
     f.write('\nZa jednoho závodníka: ' + str(fee) + ' Kč')
     f.write('\nZa kluby')
     test_sum = 0
@@ -141,5 +149,6 @@ with open(fd.asksaveasfilename(parent=root, title="Uložit výsledky to txt soub
         print(club, ':', competitors * fee)
         f.write('\n ' + str(club) + ': ' + str(competitors * fee))
         test_sum += competitors * fee
+    print('--')
     print('Kontrolní vybraná částka:', test_sum)
     f.write('\nCelková částka: ' + str(test_sum) + ' Kč')
