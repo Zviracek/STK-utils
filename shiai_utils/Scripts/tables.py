@@ -49,8 +49,8 @@ with pm.open(filename) as pdf:
             file.insert_pdf(pdf, from_page=page, to_page=page)
             new_page = file[-1]
 
-            fontname="arial"
-            fontfile="arial.ttf"
+            fontname="roboto"
+            fontfile="fonts/Roboto/Roboto-Regular.ttf"
             new_page.insert_font(fontname=fontname, fontfile=fontfile)
             
             fontsize = 25
