@@ -3,6 +3,7 @@ import pandas as pd
 import pymupdf as pm
 import tkinter as tk
 from tkinter import filedialog as fd
+import os
 
 root = tk.Tk()
 root.withdraw()
@@ -50,7 +51,8 @@ with pm.open(filename) as pdf:
             new_page = file[-1]
 
             fontname="roboto"
-            fontfile="fonts/Roboto/Roboto-Regular.ttf"
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            fontfile=os.path.join(script_dir, "fonts/Roboto/Roboto-Regular.ttf")
             new_page.insert_font(fontname=fontname, fontfile=fontfile)
             
             fontsize = 25
