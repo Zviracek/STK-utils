@@ -14,24 +14,27 @@ config:
     12: 'PROSINEC'
 
   cat_to_col_dict:
-    U8: 15
-    U10: 15
-    MU12: 13
-    WU12: 14
-    MU14: 11
-    WU14: 12
-    MU16: 9
-    WU16: 10
-    MU18: 7
-    WU18: 8
-    MU21: 5
-    WU21: 6
-    M: 3
-    W: 4
+    MU14: 15
+    WU14: 16
+    MU16: 15
+    WU16: 16
+    MU18-CSJU: 11
+    MU18-EJU: 12
+    WU18-CSJU: 13
+    WU18-EJU: 14
+    MU21-CSJU: 7
+    MU21-EJU: 8
+    WU21-CSJU: 9
+    WU21-EJU: 10
+    M-CSJU: 3
+    M-EJU: 4
+    W-CSJU: 5
+    W-EJU: 6
     ost: 16
 
   origin_dict:
-    EJU: ['#00b0f0', 'EJU - Evropský pohár']
+    EJU: ['#00b0f0', 'EJU - Evropský pohár - uzavřený']
+    EJU-Open: ['#00b0f0', 'EJU - Evropský pohár - otevřený', '#ff0000']
     MCR: ['#e46c0a', 'ČSJU - Přebor, mistrovství ČR']
     CSJU: ['#92d050', 'ČSJU - Český pohár']
     DL: ['#c6d9f1', 'ČSJU - DL, I. L, EXL']

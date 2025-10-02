@@ -13,6 +13,9 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.enums import TA_CENTER
 import reportlab.rl_config
 import yaml
+import tkinter as tk
+from tkinter import filedialog, ttk, messagebox
+
 reportlab.rl_config.warnOnMissingFontGlyphs = 0
 
 pdfmetrics.registerFont(TTFont('EncodeSansCondensed', 'EncodeSansCondensed-Regular.ttf'))
@@ -51,16 +54,18 @@ default_par_style = ParagraphStyle(
 def parse_config(file='./config.yaml'):
     with open(file, 'r', encoding="utf-8") as f:
         loaded_data = yaml.safe_load(f)
-        # print(loaded_data)
         month_dict = loaded_data['config']['month_dict']
         cat_to_col_dict = loaded_data['config']['cat_to_col_dict']
+        # Now support 2 or 3 values in origin_dict: [bg_color, label, (optional) text_color]
+        def tuple_with_text_color(value):
+            if len(value) == 2:
+                return (value[0], value[1], "#000000")  # default text color: black
+            return tuple(value)
         origin_dict = {
-            key: tuple(value) for key, value in loaded_data['config']['origin_dict'].items()
+            key: tuple_with_text_color(value) for key, value in loaded_data['config']['origin_dict'].items()
         }
     return month_dict, cat_to_col_dict, origin_dict
 
-
-[month_dict, cat_to_col_dict, origin_dict] = parse_config()
 
 def parse_data(file='./competitions.yaml'):
     with open(file, 'r', encoding="utf-8") as f:
@@ -73,7 +78,28 @@ def parse_data(file='./competitions.yaml'):
         return competitions
 
 
-test_comps = parse_data()
+def get_config_and_data(style_mode):
+    if style_mode == 'csju':
+        config_file = './config_csju.yaml'
+        data_file = './competitions_csju.yaml'
+    else:
+        config_file = './config.yaml'
+        data_file = './competitions.yaml'
+    month_dict, cat_to_col_dict, origin_dict = parse_config(config_file)
+    try:
+        competitions = parse_data(data_file)
+    except FileNotFoundError:
+        competitions = parse_data('./competitions.yaml')
+    return month_dict, cat_to_col_dict, origin_dict, competitions
+
+def get_header_and_subheader(style_mode, year):
+    if style_mode == 'csju':
+        header = generate_header_csju(year)
+        subheader = genereate_subheader_csju()
+    else:
+        header = generate_header(year)
+        subheader = None
+    return header, subheader
 
 
 class RotatedText(Flowable):
@@ -182,16 +208,21 @@ def genereate_subheader_csju():
     return_list.append('')
     return return_list
 
-def generate_pdf():
+def generate_pdf(style_mode='csju'):
+    global month_dict, cat_to_col_dict, origin_dict, test_comps
+    month_dict, cat_to_col_dict, origin_dict, test_comps = get_config_and_data(style_mode)
     styles = getSampleStyleSheet()
     styles['Normal'].fontName = 'NotoSans'
-    #header = generate_header(2025)
-    header = generate_header_csju(2025)
-    weekends = generate_weekend_dates(2025, "12-15")
+    year = 2025
+    header, subheader = get_header_and_subheader(style_mode, year)
+    weekends = generate_weekend_dates(year, "12-15")
     weekends.insert(0, header)
-    
-    # pdfmetrics.registerFont(TTFont('DejaVuSans', 'DejaVuSans.ttf'))
-    # pdfmetrics.registerFont(TTFont('DejaVuSansBold', 'DejaVuSans-Bold.ttf'))
+    if subheader:
+        weekends.insert(1, subheader)
+    data = weekends
+    comp_dict = preprocess_events_with_cats(test_comps)
+    data = insert_competitions(comp_dict, data, style_mode=style_mode)
+    weekends = data
     style = [
         ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
@@ -210,17 +241,6 @@ def generate_pdf():
         ('BACKGROUND', (2, 1), (2, -1), colors.whitesmoke),
         ('LEADING', (0, 0), (-1, -1), 7),
     ]
-
-    subheader = genereate_subheader_csju()
-    weekends.insert(1, subheader)
-    #print(weekends)
-    data = weekends
-    comp_dict = preprocess_events_with_cats(test_comps)
-    data = insert_competitions(comp_dict, data)
-
-    
-
-    weekends = data
     start_index = 0
     end_index = 0
     for i in range(len(weekends)):
@@ -234,45 +254,34 @@ def generate_pdf():
             start_index = i
     style.append(('NOSPLIT', (0, start_index), (-1, -1)))
     style.append(('SPAN', (0, start_index), (0, -1)))
-
-    #ss
-    set_header_style_csju(header, style)
-
+    if style_mode == 'csju':
+        set_header_style_csju(header, style)
+    else:
+        set_header_style(header, style)
     coll_widths = [15, 15, 15]
     for i in range(len(weekends)-3):
         coll_widths.append(72*0.75)
-
     row_heights = [20]
     for i in range(len(weekends)-1):
         row_heights.append(18.5)
-
     wrapped_data = [
         [cell if isinstance(cell, str) else cell for cell in row] for row in weekends
     ]
-
+    # Set repeatRows to 2 if subheader is present, else 1
+    repeat_rows = 2 if subheader else 1
     table = Table(
         wrapped_data,
         style=style,
         colWidths=coll_widths,
         rowHeights=row_heights,
-        repeatRows=1
+        repeatRows=repeat_rows
     )
-
     doc = SimpleDocTemplate("output.pdf", title='Kalendář KSJu PK 2025', pagesize=landscape(A4), topMargin=36, bottomMargin=36)
-    # doc.build([table])
-
-
-# Create legend entries
     legend_items = []
     for key in origin_dict.keys():
         legend_items.append(origin_dict.get(key))
-
-# Build the document
     legend = create_horizontal_legend(legend_items)
-
-# Build the document
-    elements = [table, Spacer(1, 20), legend]  # Add the table, space, and legend
-    # print(weekends)
+    elements = [table, Spacer(1, 20), legend]
     doc.build(elements)
 
 def set_header_style(header, style):
@@ -293,31 +302,30 @@ def set_header_style_csju(header, style):
     style.append(('SPAN', (0, 0), (2, 1)))
 
 
-def create_legend_entry(color, label, square_size=10, font_size=10):
-    d = Drawing(square_size * 4, square_size)  # Adjust drawing size to fit the legend item
-    y_offset = (square_size - font_size) / 2 + 1  # Center text vertically relative to the square
-
+def create_legend_entry(color, label, square_size=10, font_size=10, text_color="#000000"):
+    d = Drawing(square_size * 4, square_size)
+    y_offset = (square_size - font_size) / 2 + 1
     d.add(Rect(0, 0, square_size, square_size, fillColor=color, strokeColor=colors.black, strokeWidth=0.25))
-    # d.add(Rect(0, 0, square_size, square_size, fillColor=color, strokeColor=colors.black))
-    d.add(String(square_size + 5, y_offset, label, fontName=FONT_NAME, fontSize=font_size, fillColor=colors.black))
+    d.add(String(square_size + 5, y_offset, label, fontName=FONT_NAME, fontSize=font_size, fillColor=text_color))
     return d
 
 
 def create_horizontal_legend(entries):
-    legend = Drawing(0, 0)  # Create a base drawing for the legend
-    x_position = -50          # Start position for placing entries
-
-    for color, label in entries:
-        # Add each legend entry at the calculated position
-        entry = create_legend_entry(color, label, square_size=8, font_size=8)
-        entry_group = Group(entry)
-        entry_group.translate(x_position, 0)  # Shift the entry horizontally
+    legend = Drawing(0, 0)
+    x_position = -50
+    for entry in entries:
+        # entry: (bg_color, label, text_color)
+        if len(entry) == 3:
+            color, label, text_color = entry
+        else:
+            color, label = entry
+            text_color = "#000000"
+        legend_entry = create_legend_entry(color, label, square_size=8, font_size=8, text_color=text_color)
+        entry_group = Group(legend_entry)
+        entry_group.translate(x_position, 0)
         legend.add(entry_group)
-        # Update the position for the next entry
         legend_length = pdfmetrics.stringWidth(label, FONT_NAME, 8)
-        # x_position += 10 + 10 + len(label)*3.5  # Add spacing between entries
-        x_position += 10 + 20 + legend_length  # Add spacing between entries
-
+        x_position += 10 + 20 + legend_length
     return legend
 
 def insert_competitions_day_csju(comps, data, col_index, row_index):
@@ -326,7 +334,7 @@ def insert_competitions_day_csju(comps, data, col_index, row_index):
     style += default_style
     for i in range(len(comps)):
         comp = comps[i]
-
+        #print(comp)
         origin = comp[1]
         tags = comp[2]
         name = comp[0]
@@ -334,24 +342,19 @@ def insert_competitions_day_csju(comps, data, col_index, row_index):
         par_style = default_par_style.clone('par_style')
         if len(comps) > 1:
             par_style.fontSize -= 1
-        # datas.append([name.encode('UTF-8')])
+        # Use text color from origin_dict if present
+        bg_color, _, text_color = origin_dict.get(origin, (colors.white, '', "#000000"))
+        #print(origin_dict.get(origin, (colors.white, '', "#000000")))
+        if 'Open' in tags or 'open' in tags:
+            text_color = "#ff0000"
         if '?' in tags:
-            # datas.append([create_hatching_with_text(72*0.75, 18.5/len(comps), name, line_color=origin_dict.get(origin)[0])])
-            style.append(('BACKGROUND', (0, i), (0, i), origin_dict.get(origin)[0]))
+            style.append(('BACKGROUND', (0, i), (0, i), bg_color))
         elif 'ost' in cats:
             style.append(('BACKGROUND', (0, i), (0, i), colors.HexColor('#ffffff')))
             par_style.fontSize -= 2
         else:
-            style.append(('BACKGROUND', (0, i), (0, i), origin_dict.get(origin)[0]))
-
-        if 'MU14' in cats or 'WU14' in cats:
-            if 'Body' in tags:
-                if col_index == cat_to_col_dict.get('MU14') or col_index == cat_to_col_dict.get('WU14'):
-                    par_style.fontName = FONT_BOLD_NAME
-                    # par = Paragraph(str('<u>') + name + str('</u>'), par_style)
-                    # style.append(('FONTNAME', (0, i), (0, i), FONT_BOLD_NAME))
-                    # style.append(('UNDERLINE', (0, i), (0, i), 1))
-
+            style.append(('BACKGROUND', (0, i), (0, i), bg_color))
+        par_style.textColor = text_color
         par = Paragraph(name.encode('UTF-8'), par_style)
         datas.append([par])
     data[row_index][col_index] = Table(
@@ -362,74 +365,115 @@ def insert_competitions_day_csju(comps, data, col_index, row_index):
     )
     return data
     
-def insert_competitions_day(comps, data, col_index, row_index):
-    datas = []
-    style = []
-    style += default_style
-    for i in range(len(comps)):
-        comp = comps[i]
-
+def insert_competitions_day(comps, data, row_index, style_mode='standard'):
+    # Group competitions by column index
+    col_to_comps = defaultdict(list)
+    for comp in comps:
         origin = comp[1]
         tags = comp[2]
         name = comp[0]
         cats = comp[3]
-        par_style = default_par_style.clone('par_style')
-        if len(comps) > 1:
-            par_style.fontSize -= 1
-        # datas.append([name.encode('UTF-8')])
-        if '?' in tags:
-            # datas.append([create_hatching_with_text(72*0.75, 18.5/len(comps), name, line_color=origin_dict.get(origin)[0])])
-            style.append(('BACKGROUND', (0, i), (0, i), origin_dict.get(origin)[0]))
-        elif 'ost' in cats:
-            style.append(('BACKGROUND', (0, i), (0, i), colors.HexColor('#ffffff')))
-            par_style.fontSize -= 2
-        else:
-            style.append(('BACKGROUND', (0, i), (0, i), origin_dict.get(origin)[0]))
+        for cat in cats:
+            if style_mode == 'csju':
+                key = f"{cat}-{origin}"
+            else:
+                key = cat
+            col_index = cat_to_col_dict.get(key)
+            if col_index is not None:
+                col_to_comps[col_index].append(comp)
 
-        if 'MU14' in cats or 'WU14' in cats:
-            if 'Body' in tags:
-                if col_index == cat_to_col_dict.get('MU14') or col_index == cat_to_col_dict.get('WU14'):
-                    par_style.fontName = FONT_BOLD_NAME
-                    # par = Paragraph(str('<u>') + name + str('</u>'), par_style)
-                    # style.append(('FONTNAME', (0, i), (0, i), FONT_BOLD_NAME))
-                    # style.append(('UNDERLINE', (0, i), (0, i), 1))
-
-        par = Paragraph(name.encode('UTF-8'), par_style)
-        datas.append([par])
-    data[row_index][col_index] = Table(
-        datas,
-        style=style,
-        rowHeights=[18.5/len(comps) for c in comps],
-        colWidths=[72*0.75]
-    )
+    for col_index, comps_in_col in col_to_comps.items():
+        datas = []
+        style = []
+        style += default_style
+        for i, comp in enumerate(comps_in_col):
+            origin = comp[1]
+            tags = comp[2]
+            name = comp[0]
+            cats = comp[3]
+            par_style = default_par_style.clone('par_style')
+            if len(comps_in_col) > 1:
+                par_style.fontSize -= 1
+            bg_color, _, text_color = origin_dict.get(origin, (colors.white, '', "#000000"))
+            if '?' in tags:
+                style.append(('BACKGROUND', (0, i), (0, i), bg_color))
+            elif 'ost' in cats:
+                style.append(('BACKGROUND', (0, i), (0, i), colors.HexColor('#ffffff')))
+                par_style.fontSize -= 2
+            else:
+                style.append(('BACKGROUND', (0, i), (0, i), bg_color))
+            par_style.textColor = text_color
+            if 'MU14' in cats or 'WU14' in cats:
+                if 'Body' in tags:
+                    if col_index == cat_to_col_dict.get('MU14') or col_index == cat_to_col_dict.get('WU14'):
+                        par_style.fontName = FONT_BOLD_NAME
+            par = Paragraph(name.encode('UTF-8'), par_style)
+            datas.append([par])
+        data[row_index][col_index] = Table(
+            datas,
+            style=style,
+            rowHeights=[18.5/len(comps_in_col) for _ in comps_in_col],
+            colWidths=[72*0.75]
+        )
     return data
 
-def insert_competitions(comp_dict, data):
-    style = []
+def collect_competition_inserts(comp_dict, data, style_mode='standard'):
+    """
+    Instead of inserting directly, collect all insertions as a list of (row_index, col_index, events, style) tuples.
+    style_mode: 'standard' or 'csju'
+    """
+    inserts = []
     for cat, weekends in comp_dict.items():
-        col_index = cat_to_col_dict.get(cat)
         for weekend, events in weekends.items():
-            # print(weekend)
             if len(events) > 2:
                 print(f"More than 2 duplicate values not yet implemented, unexpected behaviour: {cat}, {weekend[1]}")
             row_index = -1
-            # true if CSJU
-            start_index = 0
-            if True:
-                start_index = 2
+            start_index = 2 if style_mode == 'csju' else 0
             for i in range(start_index, len(data)):
-                #print(data[i][0])
                 if data[i][0] == weekend[0].month:
                     for j in range(i, i+6):
                         if data[j][1] == weekend[0].day:
-                            # uz konecne mame weekend
                             row_index = j
                             break
             if row_index == -1:
                 raise ValueError(f"No date for competiton found: {cat}, {weekend[1]}")
-            else:
-                data = insert_competitions_day(events, data, col_index, row_index)
+            # For CSJU, col_index may depend on both cat and tags, so we defer calculation
+            inserts.append((row_index, cat, events))
+    return inserts
 
+def apply_competition_inserts(inserts, data, style_mode='standard'):
+    """
+    Second pass: actually insert the competitions into the table.
+    For CSJU, determine col_index based on both cat and tags.
+    """
+    for row_index, cat, events in inserts:
+        #print(f"Inserting events at row {row_index} for cat {cat}: {events}")
+        if style_mode == 'csju':
+            for event in events:
+                # event: (name, loc, tags, cats)
+                name, loc, tags, cats = event
+                # Determine gender and type for CSJU
+                # Example: cats could be ['M', 'W', ...], tags could be ['CSJU', 'EJU', ...]
+                for c in cats:
+                    if "U14" in cat or "U16" in cat or "ost" in cat:
+                        key = c
+                    else:
+                        key = f"{c}-{loc}"
+                    #print(f"Looking up key: {key}")
+                    col_index = cat_to_col_dict.get(key)
+                    if col_index is not None:
+                        #print(f"Inserting {name} into col {col_index} for cat {c} and tag {loc}")
+                        data = insert_competitions_day_csju([event], data, col_index, row_index)
+        else:
+            data = insert_competitions_day(events, data, row_index, style_mode=style_mode)
+    return data
+
+def insert_competitions(comp_dict, data, style_mode='standard'):
+    """
+    New insert_competitions: two-pass approach.
+    """
+    inserts = collect_competition_inserts(comp_dict, data, style_mode=style_mode)
+    data = apply_competition_inserts(inserts, data, style_mode=style_mode)
     return data
 
 
@@ -497,4 +541,142 @@ def create_hatching_with_text(width, height, text, spacing=5, line_color=colors.
 
     return d
 
-generate_pdf()
+def run_gui():
+    def select_competitions_file():
+        file_path = filedialog.askopenfilename(
+            filetypes=[("YAML files", "*.yaml *.yml"), ("All files", "*.*")]
+        )
+        if file_path:
+            competitions_file_var.set(file_path)
+
+    def select_output_file():
+        file_path = filedialog.asksaveasfilename(
+            defaultextension=".pdf",
+            filetypes=[("PDF files", "*.pdf"), ("All files", "*.*")]
+        )
+        return file_path
+
+    def on_generate():
+        style_mode = style_mode_var.get()
+        competitions_file = competitions_file_var.get()
+        version = version_var.get()
+        year = int(year_var.get())
+        output_file = select_output_file()
+        if not output_file:
+            return
+        orig_parse_data = parse_data
+        def parse_data_override(file=competitions_file):
+            return orig_parse_data(file)
+        globals()['parse_data'] = parse_data_override
+        orig_generate_pdf = generate_pdf
+        def generate_pdf_override(style_mode=style_mode, output_file=output_file, year=year):
+            global month_dict, cat_to_col_dict, origin_dict, test_comps
+            month_dict, cat_to_col_dict, origin_dict, test_comps = get_config_and_data(style_mode)
+            styles = getSampleStyleSheet()
+            styles['Normal'].fontName = 'NotoSans'
+            header, subheader = get_header_and_subheader(style_mode, year)
+            weekends = generate_weekend_dates(year, "12-15")
+            weekends.insert(0, header)
+            if subheader:
+                weekends.insert(1, subheader)
+            data = weekends
+            comp_dict = preprocess_events_with_cats(test_comps)
+            data = insert_competitions(comp_dict, data, style_mode=style_mode)
+            weekends = data
+            style = [
+                ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                ('SIZE', (0, 0), (-1, -1), FONT_SIZE),
+                ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+                ('BOX', (0, 0), (-1, -1), 2, colors.gray),
+                ('BOX', (0, 0), (-1, 0), 2, colors.gray),
+                ('BOX', (0, 0), (2, -1), 2, colors.gray),
+                ('TOPPADDING', (0, 0), (-1, 0), 3),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+                ('LEFTPADDING', (0, 0), (-1, -1), 3),
+                ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+                ('COLBACKGROUNDS', (3, 0), (-3, 0), [colors.aliceblue, colors.mistyrose]),
+                ('FONTNAME', (3, 0), (-1, 0), FONT_BOLD_NAME),
+                ('FONTNAME', (0, 0), (-1, -1), FONT_NAME),
+                ('BACKGROUND', (2, 1), (2, -1), colors.whitesmoke),
+                ('LEADING', (0, 0), (-1, -1), 7),
+            ]
+            start_index = 0
+            end_index = 0
+            for i in range(len(weekends)):
+                if isinstance(weekends[i][0], int):
+                    weekends[i][0] = RotatedText(month_dict.get(weekends[i][0]).encode('UTF-8'), 90)
+                    end_index = i-1
+                    if end_index != -1 and end_index != 0:
+                        style.append(('NOSPLIT', (0, start_index), (-1, end_index)))
+                        style.append(('LINEBELOW', (0, end_index), (-1, end_index), 1, colors.black))
+                        style.append(('SPAN', (0, start_index), (0, end_index)))
+                    start_index = i
+            style.append(('NOSPLIT', (0, start_index), (-1, -1)))
+            style.append(('SPAN', (0, start_index), (0, -1)))
+            if style_mode == 'csju':
+                set_header_style_csju(header, style)
+            else:
+                set_header_style(header, style)
+            coll_widths = [15, 15, 15]
+            for i in range(len(weekends)-3):
+                coll_widths.append(72*0.75)
+            row_heights = [20]
+            for i in range(len(weekends)-1):
+                row_heights.append(18.5)
+            wrapped_data = [
+                [cell if isinstance(cell, str) else cell for cell in row] for row in weekends
+            ]
+            repeat_rows = 2 if subheader else 1
+            table = Table(
+                wrapped_data,
+                style=style,
+                colWidths=coll_widths,
+                rowHeights=row_heights,
+                repeatRows=repeat_rows
+            )
+            doc = SimpleDocTemplate(output_file, title='Kalendář KSJu PK {}'.format(year), pagesize=landscape(A4), topMargin=36, bottomMargin=36)
+            legend_items = []
+            for key in origin_dict.keys():
+                legend_items.append(origin_dict.get(key))
+            legend = create_horizontal_legend(legend_items)
+            elements = [table, Spacer(1, 20), legend]
+            doc.build(elements)
+            messagebox.showinfo("Success", f"PDF generated: {output_file}")
+        globals()['generate_pdf'] = generate_pdf_override
+        try:
+            generate_pdf(style_mode=style_mode, output_file=output_file, year=year)
+        finally:
+            globals()['parse_data'] = orig_parse_data
+            globals()['generate_pdf'] = orig_generate_pdf
+
+    root = tk.Tk()
+    root.title("Judo Calendar Generator")
+
+    frm = ttk.Frame(root, padding=10)
+    frm.grid()
+
+    ttk.Label(frm, text="Mode:").grid(column=0, row=0, sticky="w")
+    style_mode_var = tk.StringVar(value="csju")
+    ttk.Combobox(frm, textvariable=style_mode_var, values=["csju", "standard"], width=10, state="readonly").grid(column=1, row=0, sticky="ew")
+
+    ttk.Label(frm, text="Competitions YAML:").grid(column=0, row=1, sticky="w")
+    competitions_file_var = tk.StringVar(value="./competitions.yaml")
+    ttk.Entry(frm, textvariable=competitions_file_var, width=40).grid(column=1, row=1, sticky="ew")
+    ttk.Button(frm, text="Browse...", command=select_competitions_file).grid(column=2, row=1, sticky="ew")
+
+    ttk.Label(frm, text="Year:").grid(column=0, row=3, sticky="w")
+    year_var = tk.StringVar(value="2025")
+    ttk.Entry(frm, textvariable=year_var, width=10).grid(column=1, row=3, sticky="ew")
+
+    ttk.Label(frm, text="Version:").grid(column=0, row=2, sticky="w")
+    version_var = tk.StringVar(value="v1")
+    ttk.Entry(frm, textvariable=version_var, width=10).grid(column=1, row=2, sticky="ew")
+
+    ttk.Button(frm, text="Generate PDF", command=on_generate).grid(column=0, row=4, columnspan=3, pady=10)
+
+    root.mainloop()
+
+# At the end of the file, call run_gui:
+if __name__ == "__main__":
+    run_gui()
