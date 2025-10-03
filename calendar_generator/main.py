@@ -334,11 +334,11 @@ def insert_competitions_day_csju(comps, data, col_index, row_index):
     style += default_style
     for i in range(len(comps)):
         comp = comps[i]
-        #print(comp)
         origin = comp[1]
         tags = comp[2]
         name = comp[0]
         cats = comp[3]
+        source = comp[4]
         par_style = default_par_style.clone('par_style')
         if len(comps) > 1:
             par_style.fontSize -= 1
@@ -451,19 +451,20 @@ def apply_competition_inserts(inserts, data, style_mode='standard'):
         if style_mode == 'csju':
             for event in events:
                 # event: (name, loc, tags, cats)
-                name, loc, tags, cats = event
+                name, loc, tags, cats, source = event
                 # Determine gender and type for CSJU
                 # Example: cats could be ['M', 'W', ...], tags could be ['CSJU', 'EJU', ...]
                 for c in cats:
-                    if "U14" in cat or "U16" in cat or "ost" in cat:
+                    if "U14" in c or "U16" in c or "ost" in c:
                         key = c
                     else:
-                        key = f"{c}-{loc}"
-                    #print(f"Looking up key: {key}")
+                        key = f"{c}-{source}"
                     col_index = cat_to_col_dict.get(key)
                     if col_index is not None:
                         #print(f"Inserting {name} into col {col_index} for cat {c} and tag {loc}")
                         data = insert_competitions_day_csju([event], data, col_index, row_index)
+                    else:
+                        print(f"Warning: No column index found for key {key}")
         else:
             data = insert_competitions_day(events, data, row_index, style_mode=style_mode)
     return data
@@ -512,11 +513,11 @@ def get_weekend_old(date):
 def preprocess_events_with_cats(events):
     grouped_by_cats = defaultdict(lambda: defaultdict(list))
 
-    for date, name, cats, loc, tags in events:
+    for date, name, cats, loc, source, tags in events:
         comp_date = parse_datetime(date)
         weekend = get_weekend(comp_date)
         for cat in cats:  # Handle multi-tag events
-            grouped_by_cats[cat][weekend].append((name, loc, tags, cats))
+            grouped_by_cats[cat][weekend].append((name, loc, tags, cats, source))
 
     return grouped_by_cats
 

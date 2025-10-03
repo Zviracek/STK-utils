@@ -33,13 +33,13 @@ config:
     ost: 16
 
   origin_dict:
-    EJU: ['#00b0f0', 'EJU - Evropský pohár - uzavřený']
-    EJU-Open: ['#00b0f0', 'EJU - Evropský pohár - otevřený', '#ff0000']
-    MCR: ['#e46c0a', 'ČSJU - Přebor, mistrovství ČR']
-    CSJU: ['#92d050', 'ČSJU - Český pohár']
-    DL: ['#c6d9f1', 'ČSJU - DL, I. L, EXL']
-    PK: ['#ffc000', 'KSJu PK']
-    JC: ['#ffff00', 'KSJu JČ']
-    KK: ['#ffccff', 'KSJu KK']
-    NEP: ['#AAAAAA', 'Zatím nepotvrzené souteže KSJu PK']
+    SPOL: ['#00ffff', 'Společné turnaje CZE - POL - SVK']
+    EJU: ['#00b0f0', 'Nominační turnaje RDD + RDJ']
+    EJUCZ: ['#0070C0', 'EJU turnaje na území ČR']
+    KATB: ['#00b0f0', 'Hodnocené turnaje kategorie B']
+    KATC: ['#00b0f0', 'Hodnocené turnaje kategorie C']
+    MCR: ['#e46c0a', 'Republikové šampionáty']
+    CSJU: ['#92d050', 'České poháry']
+    DL: ['#c6d9f1', 'Ligové soutěže - DL, I. L, EXL']
+    #NEP: ['#AAAAAA', 'Zatím nepotvrzené souteže']
 
