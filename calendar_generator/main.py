@@ -193,8 +193,8 @@ def generate_header_csju(year):
     return_list.append('')
     return_list.append(f'Dorostenky WU18\n{year-17} až {year-16}')
     return_list.append('')
-    return_list.append(f'Mladší Dorostenci MU16\nStarší žáci MU14\n{year-15} až {year-14}\n{year-13} až {year-12}')
-    return_list.append(f'Mladší Dorostenky MU16\nStarší žačky MU14\n{year-15} až {year-14}\n{year-13} až {year-12}')
+    return_list.append(f'Mladší Dorostenci\nMU16\nStarší žáci MU14\n{year-15} až {year-14}\n{year-13} až {year-12}')
+    return_list.append(f'Mladší Dorostenky\nWU16\nStarší žačky WU14\n{year-15} až {year-14}\n{year-13} až {year-12}')
     return_list.append('VT, školení')
     return return_list
 
@@ -345,6 +345,10 @@ def set_header_style_csju(header, style):
             style.append(('SPAN', (i, 0), (i+1, 0)))
     style.append(('COLBACKGROUNDS', (3, 0), (-2, 0), [colors.aliceblue, colors.aliceblue, colors.mistyrose, colors.mistyrose]))
     style.append(('SPAN', (0, 0), (2, 1)))
+    style.append(('SPAN', (17, 0), (17, 1)))
+    style.append(('SPAN', (16, 0), (16, 1)))
+    style.append(('SPAN', (15, 0), (15, 1)))
+    style.append(('COLBACKGROUNDS', (15, 1), (16, 1), [colors.aliceblue]))
 
 
 def create_legend_entry(color, label, square_size=10, font_size=10, text_color="#000000"):
@@ -621,6 +625,7 @@ def run_gui():
         competitions_file = competitions_file_var.get()
         version = version_var.get()
         year = int(year_var.get())
+        date = date_var.get()
         output_file = select_output_file()
         if not output_file:
             return
@@ -629,7 +634,7 @@ def run_gui():
             return orig_parse_data(file)
         globals()['parse_data'] = parse_data_override
         orig_generate_pdf = generate_pdf
-        def generate_pdf_override(style_mode=style_mode, output_file=output_file, year=year, version=version):
+        def generate_pdf_override(style_mode=style_mode, output_file=output_file, year=year, version=version, date=date):
             global month_dict, cat_to_col_dict, origin_dict, test_comps
             month_dict, cat_to_col_dict, origin_dict, test_comps = get_config_and_data(style_mode)
             styles = getSampleStyleSheet()
@@ -658,9 +663,13 @@ def run_gui():
                 ('COLBACKGROUNDS', (3, 0), (-3, 0), [colors.aliceblue, colors.mistyrose]),
                 ('FONTNAME', (3, 0), (-1, 0), FONT_BOLD_NAME),
                 ('FONTNAME', (0, 0), (-1, -1), FONT_NAME),
-                ('BACKGROUND', (2, 1), (2, -1), colors.whitesmoke),
                 ('LEADING', (0, 0), (-1, -1), 7),
             ]
+            if style_mode == 'csju':
+                style.append(('BACKGROUND', (2, 2), (2, -1), colors.whitesmoke))
+            else:
+                style.append(('BACKGROUND', (2, 1), (2, -1), colors.whitesmoke))
+                
             start_index = 0
             end_index = 0
             for i in range(len(weekends)):
@@ -731,7 +740,7 @@ def run_gui():
                 canvas.saveState()
                 canvas.setFont(FONT_NAME, 8)
                 version_str = f"Verze: {version}"
-                date_str = f"{datetime.datetime.now().strftime('%d.%m.%Y')}"
+                date_str = date
                 canvas.drawString(30, doc.pagesize[1] - 18, version_str)
                 canvas.drawRightString(doc.pagesize[0] - 30, doc.pagesize[1] - 18, date_str)
                 canvas.restoreState()
@@ -756,7 +765,7 @@ def run_gui():
             messagebox.showinfo("Success", f"PDF generated: {output_file}")
         globals()['generate_pdf'] = generate_pdf_override
         try:
-            generate_pdf(style_mode=style_mode, output_file=output_file, year=year, version=version)
+            generate_pdf(style_mode=style_mode, output_file=output_file, year=year, version=version, date=date)
         finally:
             globals()['parse_data'] = orig_parse_data
             globals()['generate_pdf'] = orig_generate_pdf
@@ -784,11 +793,11 @@ def run_gui():
     version_var = tk.StringVar(value="v1")
     ttk.Entry(frm, textvariable=version_var, width=10).grid(column=1, row=2, sticky="ew")
 
-    ttk.Label(frm, text="Date:").grid(column=0, row=2, sticky="w")
-    version_var = tk.StringVar(value="v1")
-    ttk.Entry(frm, textvariable=version_var, width=10).grid(column=1, row=2, sticky="ew")
+    ttk.Label(frm, text="Date:").grid(column=0, row=4, sticky="w")
+    date_var = tk.StringVar(value=datetime.datetime.now().strftime('%d.%m.%Y'))
+    ttk.Entry(frm, textvariable=date_var, width=10).grid(column=1, row=4, sticky="ew")
 
-    ttk.Button(frm, text="Generate PDF", command=on_generate).grid(column=0, row=4, columnspan=3, pady=10)
+    ttk.Button(frm, text="Generate PDF", command=on_generate).grid(column=0, row=5, columnspan=3, pady=10)
 
     root.mainloop()
 
