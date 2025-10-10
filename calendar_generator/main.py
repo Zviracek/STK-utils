@@ -2,7 +2,7 @@ import datetime
 from datetime import timedelta
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import landscape, A4
-from reportlab.platypus import Table, SimpleDocTemplate, Spacer, Paragraph
+from reportlab.platypus import Table, SimpleDocTemplate, Spacer, Paragraph, PageBreak
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus.flowables import Flowable
 from reportlab.graphics.shapes import Drawing, Rect, String, Group, Line
@@ -208,12 +208,11 @@ def genereate_subheader_csju():
     return_list.append('')
     return return_list
 
-def generate_pdf(style_mode='csju'):
+def generate_pdf(style_mode='csju', output_file="output.pdf", year=2025, version="v1"):
     global month_dict, cat_to_col_dict, origin_dict, test_comps
     month_dict, cat_to_col_dict, origin_dict, test_comps = get_config_and_data(style_mode)
     styles = getSampleStyleSheet()
     styles['Normal'].fontName = 'NotoSans'
-    year = 2025
     header, subheader = get_header_and_subheader(style_mode, year)
     weekends = generate_weekend_dates(year, "12-15")
     weekends.insert(0, header)
@@ -276,13 +275,59 @@ def generate_pdf(style_mode='csju'):
         rowHeights=row_heights,
         repeatRows=repeat_rows
     )
-    doc = SimpleDocTemplate("output.pdf", title='Kalendář KSJu PK 2025', pagesize=landscape(A4), topMargin=36, bottomMargin=36)
+    doc = SimpleDocTemplate(output_file, title='Kalendář KSJu PK {}'.format(year), pagesize=landscape(A4), topMargin=36, bottomMargin=16)
     legend_items = []
     for key in origin_dict.keys():
         legend_items.append(origin_dict.get(key))
     legend = create_horizontal_legend(legend_items)
     elements = [table, Spacer(1, 20), legend]
-    doc.build(elements)
+
+    # --- Footer legend for last page ---
+    def footer_canvas(canvas, doc):
+        if style_mode == 'csju':
+            footer_y = 14
+            x_position = 20
+            canvas.saveState()
+            canvas.setFont(FONT_NAME, 8)
+            canvas.setFillColor(colors.red)
+            canvas.drawString(x_position, footer_y + 18, "Červeně jsou označeny soutěže s otevřenou účastí")
+            canvas.setFont(FONT_NAME, 8)
+            canvas.setFillColor(colors.black)
+            canvas.drawString(
+                x_position, footer_y + 8,
+                "MS=Mistrovství světa, ME=Mistrovství Evropy, GranSlam=nejvyšší bodová soutěž IJF, GP= Grand Prix (2.nejvyšší bodová soutěž IJF), EO=European Open (3.nejvyšší bodová soutěž EJU), EC=European Cup=turnaje EJU kategorie \"B\""
+            )
+            canvas.drawString(
+                x_position, footer_y,
+                "MČR=Mistrovství ČR, PČR=Přebor ČR, ČP= Český pohár (bodovaný turnaj), TC= Tréninkový kemp, EXL, IL, DL=dlouhodobé soutěže družstev"
+            )
+            canvas.restoreState()
+
+    # --- Header with version and date ---
+    def header_canvas(canvas, doc):
+        canvas.saveState()
+        canvas.setFont(FONT_BOLD_NAME, 10)
+        version_str = f"Verze: {version}"
+        date_str = f"Vygenerováno: {datetime.datetime.now().strftime('%d.%m.%Y %H:%M')}"
+        canvas.drawString(40, doc.pagesize[1] - 28, version_str)
+        canvas.drawRightString(doc.pagesize[0] - 40, doc.pagesize[1] - 28, date_str)
+        canvas.restoreState()
+
+    if style_mode == 'csju':
+        doc.build(
+            elements,
+            onFirstPage=header_canvas,
+            onLaterPages=header_canvas,
+            onLaterPagesEnd=footer_canvas
+        )
+    else:
+        doc.build(
+            elements,
+            onFirstPage=header_canvas,
+            onLaterPages=header_canvas
+        )
+
+    messagebox.showinfo("Success", f"PDF generated: {output_file}")
 
 def set_header_style(header, style):
     for i in range(3, len(header)):
@@ -313,7 +358,9 @@ def create_legend_entry(color, label, square_size=10, font_size=10, text_color="
 def create_horizontal_legend(entries):
     legend = Drawing(0, 0)
     x_position = -50
-    for entry in entries:
+    y_position = 0
+    items_per_row = 6
+    for idx, entry in enumerate(entries):
         # entry: (bg_color, label, text_color)
         if len(entry) == 3:
             color, label, text_color = entry
@@ -322,11 +369,23 @@ def create_horizontal_legend(entries):
             text_color = "#000000"
         legend_entry = create_legend_entry(color, label, square_size=8, font_size=8, text_color=text_color)
         entry_group = Group(legend_entry)
-        entry_group.translate(x_position, 0)
+        entry_group.translate(x_position, y_position)
         legend.add(entry_group)
         legend_length = pdfmetrics.stringWidth(label, FONT_NAME, 8)
         x_position += 10 + 20 + legend_length
+        if (idx + 1) % items_per_row == 0:
+            x_position = -50
+            y_position -= 16  # Move down for next row (adjust as needed)
     return legend
+
+def create_textual_legend():
+    red = Drawing(0, 0)
+    x_position = -50
+    red.add(String(x_position, 0, "Červeně jsou označeny soutěže s otevřenou účastí:", fontSize=8, fillColor=colors.red))
+
+    legend = Drawing(0, 0)
+    legend.add(String(x_position, 0, "MS=Mistrovství světa, ME=Mistrovství Evropy, GranSlam=nejvyšší bodová soutěž IJF, GP= Grand Prix (2.nejvyšší bodová soutěž IJF), EO=European Open (3.nejvyšší bodová soutěž EJU), EC=European Cup=turnaje EJU kategorie \"B\", MČR=Mistrovství ČR, PČR=Přebor ČR, ČP= Český pohár (bodovaný turnaj), TC= Tréninkový kemp, EXL, IL, DL=dlouhodobé soutěže družstev", fontSize=4))
+    return [Spacer(1, 10), red, Spacer(1, 10), legend]
 
 def insert_competitions_day_csju(comps, data, col_index, row_index):
     datas = []
@@ -361,7 +420,7 @@ def insert_competitions_day_csju(comps, data, col_index, row_index):
         datas,
         style=style,
         rowHeights=[18.5/len(comps) for c in comps],
-        colWidths=[72*0.75]
+        colWidths=[72*0.7]
     )
     return data
     
@@ -570,7 +629,7 @@ def run_gui():
             return orig_parse_data(file)
         globals()['parse_data'] = parse_data_override
         orig_generate_pdf = generate_pdf
-        def generate_pdf_override(style_mode=style_mode, output_file=output_file, year=year):
+        def generate_pdf_override(style_mode=style_mode, output_file=output_file, year=year, version=version):
             global month_dict, cat_to_col_dict, origin_dict, test_comps
             month_dict, cat_to_col_dict, origin_dict, test_comps = get_config_and_data(style_mode)
             styles = getSampleStyleSheet()
@@ -621,7 +680,10 @@ def run_gui():
                 set_header_style(header, style)
             coll_widths = [15, 15, 15]
             for i in range(len(weekends)-3):
-                coll_widths.append(72*0.75)
+                if style_mode == 'csju':
+                    coll_widths.append(72*0.7)
+                else:
+                    coll_widths.append(72*0.75)
             row_heights = [20]
             for i in range(len(weekends)-1):
                 row_heights.append(18.5)
@@ -636,21 +698,69 @@ def run_gui():
                 rowHeights=row_heights,
                 repeatRows=repeat_rows
             )
-            doc = SimpleDocTemplate(output_file, title='Kalendář KSJu PK {}'.format(year), pagesize=landscape(A4), topMargin=36, bottomMargin=36)
+            doc = SimpleDocTemplate(output_file, title='Kalendář KSJu PK {}'.format(year), pagesize=landscape(A4), topMargin=20, bottomMargin=16)
             legend_items = []
             for key in origin_dict.keys():
                 legend_items.append(origin_dict.get(key))
             legend = create_horizontal_legend(legend_items)
             elements = [table, Spacer(1, 20), legend]
-            doc.build(elements)
+
+            # --- Footer legend for last page ---
+            def footer_canvas(canvas, doc):
+                if style_mode == 'csju':
+                    footer_y = 14
+                    x_position = 20
+                    canvas.saveState()
+                    canvas.setFont(FONT_NAME, 7)
+                    canvas.setFillColor(colors.red)
+                    canvas.drawString(x_position, footer_y + 18, "Červeně jsou označeny soutěže s otevřenou účastí")
+                    canvas.setFont(FONT_NAME, 7)
+                    canvas.setFillColor(colors.black)
+                    canvas.drawString(
+                        x_position, footer_y + 8,
+                        "MS=Mistrovství světa, ME=Mistrovství Evropy, GranSlam=nejvyšší bodová soutěž IJF, GP= Grand Prix (2.nejvyšší bodová soutěž IJF), EO=European Open (3.nejvyšší bodová soutěž EJU), EC=European Cup=turnaje EJU kategorie \"B\""
+                    )
+                    canvas.drawString(
+                        x_position, footer_y,
+                        "MČR=Mistrovství ČR, PČR=Přebor ČR, ČP= Český pohár (bodovaný turnaj), TC= Tréninkový kemp, EXL, IL, DL=dlouhodobé soutěže družstev"
+                    )
+                    canvas.restoreState()
+
+            # --- Header with version and date ---
+            def header_canvas(canvas, doc):
+                canvas.saveState()
+                canvas.setFont(FONT_NAME, 8)
+                version_str = f"Verze: {version}"
+                date_str = f"{datetime.datetime.now().strftime('%d.%m.%Y')}"
+                canvas.drawString(30, doc.pagesize[1] - 18, version_str)
+                canvas.drawRightString(doc.pagesize[0] - 30, doc.pagesize[1] - 18, date_str)
+                canvas.restoreState()
+
+            def both_canvas(canvas, doc):
+                header_canvas(canvas, doc)
+                footer_canvas(canvas, doc)
+
+            if style_mode == 'csju':
+                doc.build(
+                    elements,
+                    onFirstPage=header_canvas,
+                    onLaterPages=both_canvas,
+                )
+            else:
+                doc.build(
+                    elements,
+                    onFirstPage=header_canvas,
+                    onLaterPages=header_canvas
+                )
+
             messagebox.showinfo("Success", f"PDF generated: {output_file}")
         globals()['generate_pdf'] = generate_pdf_override
         try:
-            generate_pdf(style_mode=style_mode, output_file=output_file, year=year)
+            generate_pdf(style_mode=style_mode, output_file=output_file, year=year, version=version)
         finally:
             globals()['parse_data'] = orig_parse_data
             globals()['generate_pdf'] = orig_generate_pdf
-
+    # ...existing code...
     root = tk.Tk()
     root.title("Judo Calendar Generator")
 
@@ -671,6 +781,10 @@ def run_gui():
     ttk.Entry(frm, textvariable=year_var, width=10).grid(column=1, row=3, sticky="ew")
 
     ttk.Label(frm, text="Version:").grid(column=0, row=2, sticky="w")
+    version_var = tk.StringVar(value="v1")
+    ttk.Entry(frm, textvariable=version_var, width=10).grid(column=1, row=2, sticky="ew")
+
+    ttk.Label(frm, text="Date:").grid(column=0, row=2, sticky="w")
     version_var = tk.StringVar(value="v1")
     ttk.Entry(frm, textvariable=version_var, width=10).grid(column=1, row=2, sticky="ew")
 
