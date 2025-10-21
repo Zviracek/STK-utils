@@ -312,6 +312,7 @@ class CalendarGenerator:
     def generate_pdf(self, output_file, year, version="v1", date_str=None):
         if date_str is None:
             date_str = datetime.datetime.now().strftime('%d.%m.%Y')
+        month_dict, cat_to_col_dict, origin_dict, test_comps = get_config_and_data(style_mode)
         header = self.get_header(year)
         subheader = self.get_subheader(year)
         weekends = self.generate_weekend_dates(year, "12-15")
