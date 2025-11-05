@@ -43,3 +43,16 @@ config:
     DL: ['#c6d9f1', 'Ligové soutěže - DL, I. L, EXL']
     #NEP: ['#AAAAAA', 'Zatím nepotvrzené souteže']
 
+  additional_styling:
+    # entries jsou ve formatu:
+    # - [tag, reportlab property, value] 
+    - ['Open', 'COLOR', '#FF0000']
+
+  notes:
+  # entries jsou ve formatu:
+  # - {text: "text poznámky", color: "#RRGGBB"} na pořadí klíčů uvnitř {} nezáleží
+  # a jsou sázeny od spoda nahoru
+   - {text: "MČR=Mistrovství ČR, PČR=Přebor ČR, ČP= Český pohár (bodovaný turnaj), TC= Tréninkový kemp, EXL, IL, DL=dlouhodobé soutěže družstev"} 
+   - {text: "MS=Mistrovství světa, ME=Mistrovství Evropy, GranSlam=nejvyšší bodová soutěž IJF, GP= Grand Prix (2.nejvyšší bodová soutěž IJF), EO=European Open (3.nejvyšší bodová soutěž EJU), EC=European Cup=turnaje EJU kategorie \"B\","} 
+   - {color: "#FF0000", text: "Turnaje označené červeně mají otevřenou účast"}
+

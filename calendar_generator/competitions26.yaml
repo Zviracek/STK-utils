@@ -1,0 +1,78 @@
+competitions:
+  # example entry: -['YYYY-MM-DD', 'Name', ['cat1', 'cat2', ...], 'location', '[tags]']
+  # categories inside the yaml are for organization purposes only
+
+  pk_comps:
+    - ['2026-01-24', 'Memorial Ing. Beneše', ['MU14', 'WU14', 'MU16', 'WU16'], 'PK', ['Body']]
+    - ['2026-03-07', 'Jarní turnaj Sušice', ['MU12', 'WU12', 'U10'], 'PK', []]
+    - ['2026-04-11', 'Veklá cena Sušice', ['MU14', 'WU14', 'MU12', 'WU12'], 'PK', ['Body']]
+    - ['2026-11-08', 'Memorial Ing Radoše', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16'], 'NEP', []]
+    - ['2026-12-12', 'Vánoční turnaj Blovice', ['MU12', 'WU12', 'MU14', 'WU14', 'U10'], 'PK', []]
+    #- ['2025-09-27', 'KP', ['MU14', 'WU14', 'MU16', 'WU16'], 'NEP', ['Body']]
+
+  eju_comps:
+    - ['2025-04-05', 'EC Teplice', ['MU18', 'WU18'], 'EJU', []]
+    - ['2025-07-05', 'EC Prague', ['MU21', 'WU21'], 'EJU', []]
+    - ['2025-09-27', 'EC Prague', ['M', 'W'], 'EJU', []]
+
+  csju_comps:
+    - ['2025-01-25', 'Pohár nadějí Prostějov', ['M', 'W', 'WU21', 'MU21', 'MU18', 'WU18'], 'CSJU', []]
+    - ['2025-02-01', 'ČP Praha', ['M', 'W', 'WU21', 'MU21'], 'CSJU', []]
+    - ['2025-09-06', 'ČP Brno', ['M', 'W', 'MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18', 'WU21', 'MU21'], 'CSJU', ['Body']]
+    - ['2025-03-15', 'ČP Ostrava', ['MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18'], 'CSJU', ['Body']]
+    - ['2025-05-31', 'ČP Jablonec', ['M', 'W', 'MU18', 'WU18', 'MU16', 'WU16', 'WU21', 'MU21'], 'CSJU', []]
+    - ['2025-05-10', 'ČP Nový Bydžov', ['MU16', 'WU16', 'WU18', 'MU18'], 'CSJU', []]
+
+  mcr_comps:
+    - ['2025-03-01', 'MČR', ['MU18', 'WU18'], 'MCR', []]
+    - ['2025-09-20', 'MČR Veteránů', ['M'], 'MCR', []]
+    - ['2025-10-11', 'MČR', ['M', 'W'], 'MCR', []]
+    - ['2025-10-11', 'MČR Seniorů', ['MU21', 'WU21'], 'MCR', []]
+    - ['2025-10-18', 'MČR', ['MU21', 'WU21'], 'MCR', []]
+    - ['2025-10-25', 'MČR dr. WU18', ['WU18'], 'MCR', []]
+    - ['2025-10-25', 'MČR dr. mix U16', ['MU16', 'WU16'], 'MCR', []]
+    - ['2025-10-25', 'PČR dr. U14', ['MU14', 'WU14'], 'MCR', []]
+    - ['2025-11-15', 'MČR', ['MU16', 'WU16'], 'MCR', []]
+    - ['2025-11-15', 'PČR', ['MU14', 'WU14'], 'MCR', []]
+    - ['2025-11-08', 'MČR dr. žen', ['W'], 'MCR', []]
+
+  dl_comps:
+    - ['2025-01-18', 'Kvalifikace I. L', ['M'], 'DL', []]
+    - ['2025-02-22', 'Kvalifikace DL', ['MU18'], 'DL', []]
+    - ['2025-03-22', 'DL 1. kolo', ['MU18'], 'DL', []]
+    - ['2025-06-07', 'DL 2. kolo', ['MU18'], 'DL', []]
+    - ['2025-09-20', 'DL 3. kolo', ['MU18'], 'DL', []]
+    - ['2025-04-12', 'I. L 1. kolo', ['M'], 'DL', []]
+    - ['2025-05-17', 'I. L 2. kolo', ['M'], 'DL', []]
+    - ['2025-09-13', 'I. L 3. kolo', ['M'], 'DL', []]
+    - ['2025-04-12', 'EXL 1. kolo', ['M'], 'DL', []]
+    - ['2025-05-17', 'EXL 2. kolo', ['M'], 'DL', []]
+    - ['2025-11-08', 'Finále EXL', ['M'], 'DL', []]
+    - ['2025-11-08', 'Finále DL', ['MU18'], 'DL', []]
+
+  jc_comps:
+    - ['2025-02-08', 'Čoko turnaj Kaplice', ['WU18', 'MU18', 'MU14', 'WU14', 'MU16', 'WU16'], 'JC', []]
+    - ['2025-04-05', 'Veklá cena Dačice', ['U10', 'MU14', 'WU14', 'MU12', 'WU12'], 'JC', []]
+    - ['2025-04-26', 'Veklá cena Blatná', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'JC', []]
+    - ['2025-05-24', 'Veklá cena Prachatice', ['U10', 'MU14', 'WU14', 'MU12', 'WU12'], 'JC', []]
+    - ['2025-05-31', 'Pohár Tábor', ['U10', 'MU12', 'WU12'], 'JC', []]
+    - ['2025-06-14', 'Pohár Města Č. B.', ['U10', 'MU12', 'WU12', 'MU14', 'WU14'], 'JC', []]
+    - ['2025-10-04', 'Pohár Tábor', ['WU16', 'MU16', 'MU14', 'WU14'], 'JC', []]
+    - ['2025-10-18', 'Týn Cup', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'JC', []]
+    - ['2025-11-01', 'Podzimní turnaj Blatná', ['U10', 'MU12', 'WU12'], 'JC', []]
+    - ['2025-12-06', 'Randori Cup Kaplice', ['U10', 'MU12', 'WU12', 'MU14', 'WU14'], 'JC', []]
+    - ['2025-12-13', 'Vánoční pohár Prachatice', ['M', 'MU18', 'WU18'], 'JC', []]
+
+  kk_comps:
+    - ['2025-05-17', 'Veklá cena Chebu', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+    - ['2025-03-29', 'Veklá cena ML', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+    - ['2025-02-01', 'KL Sokolov', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+    - ['2025-04-26', 'KL ML', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+    - ['2025-10-04', 'KL Sokolov', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+    - ['2025-10-25', 'KL ML', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+
+  holidays:
+    - ['2025-02-08', 'Jarní prázdniny Rokycany (3. 2. - 9. 2.)', ['ost'], 'PK', []]
+    - ['2025-02-15', 'Jarní prázdniny Domažlice (10. 2. - 16. 2.)', ['ost'], 'PK', []]
+    - ['2025-03-02', "Jarní prázdniny Plzeň <br/> (24. 2. - 2. 3.)", ['ost'], 'PK', []]
+
