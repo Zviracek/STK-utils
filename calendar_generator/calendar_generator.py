@@ -205,7 +205,7 @@ class CalendarGenerator:
         return weekend_dates
 
     def preprocess_events_with_cats(self, events):
-        grouped = defaultdict(lambda: defaultdict(list))
+        grouped = defaultdict(list)
         for rec in events:
             # expected tuple formats: previous versions had multiple variants
             # try to normalize: (date, name, cats, loc, source?, tags?)
@@ -219,8 +219,7 @@ class CalendarGenerator:
                 continue
             comp_date = datetime.datetime.strptime(date, "%Y-%m-%d")
             weekend = self.get_weekend(comp_date)
-            for cat in cats:
-                grouped[cat][weekend].append((name, loc, tags, cats, source))
+            grouped[weekend].append((name, loc, tags, cats, source))
         return grouped
 
     def get_weekend(self, date):
@@ -243,6 +242,7 @@ class CalendarGenerator:
     # insert events in a given row by grouping into columns
     def insert_competitions_day(self, comps, data, row_index):
         col_to_comps = defaultdict(list)
+        print(comps)
         for comp in comps:
             for key in self.keys_for_event(comp):
                 col_index = self.cat_to_col_dict.get(key)
@@ -292,36 +292,34 @@ class CalendarGenerator:
     # main insertion pass (two-pass)
     def collect_competition_inserts(self, comp_dict, data):
         inserts = []
-        for cat, weekends in comp_dict.items():
-            for weekend, events in weekends.items():
-                if len(events) > 2:
-                    # Convert weekend[1] to readable date format
-                    date_str = weekend[1].isoformat() if hasattr(weekend[1], 'isoformat') else str(weekend[1])
-                    msg = f"More than 2 events per weekend unsupported, unexpected behaviour:\nCategory: {cat}\nDate: {date_str}\nEvents: {', '.join(e[0] for e in events)}"
-                    messagebox.showwarning("Too many events", msg)
-                row_index = -1
-                start_index = 0
-                for i in range(start_index, len(data)):
-                    if data[i][0] == weekend[0].month:
-                        for j in range(i, i+6):
-                            if j >  len(data) - 1:
-                                break
-                            if data[j][1] == weekend[0].day:
-                                row_index = j
-                                break
-                if row_index == -1:
-                    # record missing entry and continue instead of raising
-                    self.missing_entries.append({
-                        'cat': cat,
-                        'weekend': weekend,
-                        'events': events
-                    })
-                    continue
-                inserts.append((row_index, cat, events))
+        for weekend, events in comp_dict.items():
+            if len(events) > 2:
+                # Convert weekend[1] to readable date format
+                date_str = weekend[1].isoformat() if hasattr(weekend[1], 'isoformat') else str(weekend[1])
+                msg = f"More than 2 events per weekend unsupported, unexpected behaviour:\nDate: {date_str}\nEvents: {', '.join(e[0] for e in events)}"
+                messagebox.showwarning("Too many events", msg)
+            row_index = -1
+            start_index = 0
+            for i in range(start_index, len(data)):
+                if data[i][0] == weekend[0].month:
+                    for j in range(i, i+6):
+                        if j >  len(data) - 1:
+                            break
+                        if data[j][1] == weekend[0].day:
+                            row_index = j
+                            break
+            if row_index == -1:
+                # record missing entry and continue instead of raising
+                self.missing_entries.append({
+                    'weekend': weekend,
+                    'events': events
+                })
+                continue
+            inserts.append((row_index, events))
         return inserts
 
     def apply_competition_inserts(self, inserts, data):
-        for row_index, cat, events in inserts:
+        for row_index, events in inserts:
             # default: insert whole day's events using standard column logic
             data = self.insert_competitions_day(events, data, row_index)
         return data
@@ -366,6 +364,7 @@ class CalendarGenerator:
         comp_dict = self.preprocess_events_with_cats(self.events)
         inserts = self.collect_competition_inserts(comp_dict, data)
         data = self.apply_competition_inserts(inserts, data)
+        
         # build table
         style = self.get_style()
         if subheader:
