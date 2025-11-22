@@ -6,7 +6,7 @@ competitions:
     - ['2026-01-24', 'Memorial Ing. Beneše', ['MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18'], 'PK', ['Body']]
     - ['2026-03-07', 'Jarní turnaj Sušice', ['MU12', 'WU12', 'U10'], 'PK', []]
     - ['2026-04-11', 'Veklá cena Sušice', ['MU14', 'WU14', 'MU12', 'WU12'], 'PK', ['Body']]
-    - ['2026-11-08', 'Memorial Ing Radoše', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16'], 'NEP', []]
+    - ['2026-11-21', 'Memorial Ing Radoše', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16'], 'NEP', []]
     - ['2026-12-12', 'Vánoční turnaj Blovice', ['MU12', 'WU12', 'MU14', 'WU14', 'U10'], 'PK', []]
     - ['2026-09-27', 'Předpokládaný termín KP', ['MU14', 'WU14', 'MU16', 'WU16'], 'NEP', ['Body']]
 
@@ -27,9 +27,10 @@ competitions:
     - ['2026-02-28', 'MČR', ['MU18', 'WU18'], 'MCR', []]
     #- ['2026-09-20', 'MČR Veteránů', ['M'], 'MCR', []]
     #- ['2026-10-11', 'MČR Seniorů', ['MU21', 'WU21'], 'MCR', []]
-    - ['2026-10-17', 'MČR', ['MU21', 'WU21'], 'MCR', []]
-    - ['2026-11-07', 'MČR', ['M'], 'MCR', []]
-    - ['2026-10-24', 'MČR dr. WU18', ['WU18'], 'MCR', []]
+    - ['2026-11-07', 'MČR', ['MU21', 'WU21'], 'MCR', []]
+    - ['2026-06-06', 'MČR', ['M'], 'MCR', []]
+    - ['2026-10-11', 'MČR dr. mix U21', ['MU21', 'WU21'], 'MCR', []]
+    - ['2026-10-25', 'MČR dr. WU18', ['WU18'], 'MCR', []]
     - ['2026-10-24', 'MČR dr. mix U16', ['MU16', 'WU16'], 'MCR', []]
     - ['2026-10-24', 'PČR dr. U14', ['MU14', 'WU14'], 'MCR', []]
     - ['2026-11-14', 'MČR', ['MU16', 'WU16'], 'MCR', []]
@@ -67,8 +68,8 @@ competitions:
     #- ['2026-12-06', 'Randori Cup Kaplice', ['U10', 'MU12', 'WU12', 'MU14', 'WU14'], 'JC', []]
     #- ['2026-12-13', 'Vánoční pohár Prachatice', ['M', 'MU18', 'WU18'], 'JC', []]
 
-  #kk_comps:
-    #- ['2026-05-17', 'Veklá cena Chebu', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
+  kk_comps:
+    - ['2026-04-18', 'Veklá cena Chebu', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
     #- ['2026-03-29', 'Veklá cena ML', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
     #- ['2026-02-01', 'KL Sokolov', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
     #- ['2026-04-26', 'KL ML', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'KK', []]
