@@ -130,6 +130,9 @@ class CalendarGenerator:
         except FileNotFoundError:
             self.events = []
 
+    def get_title():
+        return "Kalendář soutěží KSJu PK"
+
     # headers - subclasses may override
     def get_header(self, year):
         # Datum, datum, datum, Muzi, Zeny, MU21, WU21, MU18, WU18, MU16, WU16, MU14, WU14, MU12, WU12, U8 U10, VT SE Skoleni

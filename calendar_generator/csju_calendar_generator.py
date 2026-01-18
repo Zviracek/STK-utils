@@ -8,6 +8,9 @@ class CsjuCalendarGenerator(CalendarGenerator):
         super().__init__(config_file=config_file, data_file=data_file)
         self.collumn_width = 50  # Adjusted column width for CSJU
 
+    def get_title():
+        return "Kalendář soutěží ČSJU"
+
     def get_header(self, year):
         # Datum, datum, datum, Muzi, Zeny, MU21, WU21, MU18, WU18, MU16, WU16, MU14, WU14, MU12, WU12, U8 U10, VT SE Skoleni
         return_list = ['Datum', '', '']

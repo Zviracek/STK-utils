@@ -7,6 +7,7 @@ from tkinter import filedialog, ttk, messagebox
 
 from calendar_generator import CalendarGenerator
 from csju_calendar_generator import CsjuCalendarGenerator
+from jcpl_calendar_generator import JcplCalendarGenerator
 
 reportlab.rl_config.warnOnMissingFontGlyphs = 0
 
@@ -24,6 +25,8 @@ pdfmetrics.registerFont(TTFont('IBMBold', 'IBMPlexSansCondensed-Bold.ttf'))
 def get_generator_for_mode(mode, competitions_file):
     if mode == 'csju':
         gen = CsjuCalendarGenerator(config_file='./config_csju.yaml', data_file=competitions_file)
+    elif mode == 'JCPL':
+        gen = JcplCalendarGenerator(config_file='./jcpl_config.yaml', data_file=competitions_file)
     else:
         gen = CalendarGenerator(config_file='./config.yaml', data_file=competitions_file)
     return gen
@@ -42,7 +45,7 @@ def run_gui():
     frm = ttk.Frame(root, padding=10); frm.grid()
     ttk.Label(frm, text="Mode:").grid(column=0, row=0, sticky="w")
     style_mode_var = tk.StringVar(value="csju")
-    ttk.Combobox(frm, textvariable=style_mode_var, values=["csju", "ksju PK"], width=10, state="readonly").grid(column=1, row=0, sticky="ew")
+    ttk.Combobox(frm, textvariable=style_mode_var, values=["csju", "ksju PK", "JCPL"], width=10, state="readonly").grid(column=1, row=0, sticky="ew")
     ttk.Label(frm, text="Competitions YAML:").grid(column=0, row=1, sticky="w")
     competitions_file_var = tk.StringVar(value="./competitions.yaml")
     ttk.Entry(frm, textvariable=competitions_file_var, width=40).grid(column=1, row=1, sticky="ew")
