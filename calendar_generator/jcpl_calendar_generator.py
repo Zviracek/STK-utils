@@ -4,7 +4,7 @@ from reportlab.lib import colors
 from calendar_generator import FONT_NAME, FONT_BOLD_NAME
 
 class JcplCalendarGenerator(CalendarGenerator):
-    def __init__(self, config_file='./jcpl_config.yaml', data_file='./competitions.yaml'):
+    def __init__(self, config_file='./config_jcpl.yaml', data_file='./competitions.yaml'):
         super().__init__(config_file=config_file, data_file=data_file)
         #self.collumn_width = 50  # Adjusted column width for CSJU
 

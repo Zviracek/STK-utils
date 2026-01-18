@@ -1,0 +1,57 @@
+competitions:
+  # example entry: -['YYYY-MM-DD', 'Name', ['cat1', 'cat2', ...], 'location', '[tags]']
+  # categories inside the yaml are for organization purposes only
+
+  pk_comps:
+    - ['2026-01-24', 'Memorial Ing. Beneše', ['MU16', 'WU16', 'MU18', 'WU18'], 'JCPL', []]
+    - ['2026-01-24', 'Memorial Ing. Beneše', ['MU14', 'WU14'], 'CSJU', []]
+    - ['2026-03-07', 'Jarní turnaj Sušice', ['MU12', 'WU12'], 'TUR', []]
+    - ['2026-04-11', 'Veklá cena Sušice', ['MU12', 'WU12'], 'TUR', []]
+    - ['2026-04-11', 'Veklá cena Sušice', ['MU14', 'WU14'], 'CSJU', []]
+    - ['2026-11-21', 'Memorial Ing Radoše', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16'], 'TUR', []]
+    - ['2026-12-12', 'Vánoční turnaj Blovice', ['MU12', 'WU12', 'U10'], 'TUR', []]
+    - ['2026-09-27', 'Předpokládaný termín KP', ['MU14', 'WU14', 'MU16', 'WU16'], 'CSJU', []]
+
+  csju_comps:
+    - ['2026-01-24', 'Pohár nadějí Olomouc', ['M', 'W', 'MU18', 'WU18'], 'CSJU', []]
+    - ['2026-02-07', 'ČP Praha', ['M', 'W'], 'CSJU', []]
+    - ['2026-03-21', 'ČP Ostrava', ['MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18', 'M', 'W'], 'CSJU', []]
+    - ['2026-05-02', 'ČP Nový Bydžov', ['MU16', 'WU16', 'WU18', 'MU18', 'M', 'W', 'WU21', 'MU21'], 'CSJU', []]
+    - ['2026-05-23', 'ČP Jablonec', ['M', 'W', 'MU18', 'WU18', 'MU16', 'WU16'], 'CSJU', []]
+    - ['2026-09-05', 'ČP Brno', ['M', 'W', 'MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18'], 'CSJU', []]
+
+  mcr_comps:
+    - ['2026-02-28', 'MČR', ['MU18', 'WU18'], 'MCR', []]
+    - ['2026-10-31', 'MČR', ['MU21', 'WU21'], 'MCR', []]
+    - ['2026-06-06', 'MČR - dětský den JCPL', ['MU16', 'WU16', 'WU18', 'MU18', 'MU14', 'WU14', 'WU21', 'MU21', 'MU12', 'WU12', 'U10'], 'JCPL', []]
+    - ['2026-06-06', 'MČR', ['M', 'W'], 'MCR', []]
+    - ['2026-10-24', 'MČR dr. mix U16', ['MU16', 'WU16'], 'MCR', []]
+    - ['2026-10-24', 'PČR dr. U14', ['MU14', 'WU14'], 'MCR', []]
+    - ['2026-11-14', 'MČR', ['MU16', 'WU16'], 'MCR', []]
+    - ['2026-11-14', 'PČR', ['MU14', 'WU14'], 'MCR', []]
+
+  dl_comps:
+    - ['2026-02-21', 'Kvalifikace I. L', ['M'], 'DL', []]
+    - ['2026-01-31', 'Kvalifikace DL', ['MU18'], 'DL', []]
+    - ['2026-03-07', 'DL 1. kolo', ['MU18'], 'DL', []]
+    - ['2026-04-11', 'DL 2. kolo', ['MU18'], 'DL', []]
+    - ['2026-09-19', 'DL 3. kolo', ['MU18'], 'DL', []]
+    - ['2026-05-09', 'I. L 1. kolo', ['M'], 'DL', []]
+    - ['2026-06-13', 'I. L 2. kolo', ['M'], 'DL', []]
+    - ['2026-09-12', 'I. L 3. kolo', ['M'], 'DL', []]
+
+  ostatni_comps:
+    - ['2026-03-28', 'Veklá cena ML', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'TUR', []]
+    - ['2026-05-30', 'VC Beroun', ['WU16', 'MU16', 'MU14', 'WU14', 'MU12', 'WU12'], 'TUR', []]
+
+  jcpl:
+    - ['2026-03-13', 'Minitrunaj (13. 3.)', ['U10'], 'JCPL', []]
+    - ['2026-06-18', 'Minitrunaj (19. 6.)', ['U10'], 'JCPL', []]
+    - ['2026-07-25', 'LT Plasy (25. 7. -)', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18'], 'JCPL', []]
+    - ['2026-08-01', 'LT Plasy ( - 1. 8.)', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18'], 'JCPL', []]
+    - ['2026-05-16', 'Nečtiny (15. - 17. 5.)', ['U10', 'MU12', 'WU12', 'MU14', 'WU14', 'MU16', 'WU16', 'MU18', 'WU18'], 'JCPL', []]
+
+  #holidays:
+    #- ['2026-02-08', 'Jarní prázdniny Rokycany (3. 2. - 9. 2.)', ['ost'], 'PK', []]
+    #- ['2026-02-15', 'Jarní prázdniny Domažlice (10. 2. - 16. 2.)', ['ost'], 'PK', []]
+    #- ['2026-03-02', "Jarní prázdniny Plzeň <br/> (24. 2. - 2. 3.)", ['ost'], 'PK', []]

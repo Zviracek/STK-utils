@@ -26,7 +26,7 @@ def get_generator_for_mode(mode, competitions_file):
     if mode == 'csju':
         gen = CsjuCalendarGenerator(config_file='./config_csju.yaml', data_file=competitions_file)
     elif mode == 'JCPL':
-        gen = JcplCalendarGenerator(config_file='./jcpl_config.yaml', data_file=competitions_file)
+        gen = JcplCalendarGenerator(config_file='./config_jcpl.yaml', data_file=competitions_file)
     else:
         gen = CalendarGenerator(config_file='./config.yaml', data_file=competitions_file)
     return gen
