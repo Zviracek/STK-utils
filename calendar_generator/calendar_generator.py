@@ -81,7 +81,7 @@ def create_horizontal_legend(entries, items_per_row=6):
     return legend
 
 # --- config parsing (shared) ---
-def parse_config(file='./config.yaml'):
+def parse_config(file='config.yaml'):
     with open(file, 'r', encoding="utf-8") as f:
         loaded_data = yaml.safe_load(f)
     cfg = loaded_data.get('config', {})

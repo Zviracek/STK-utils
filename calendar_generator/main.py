@@ -1,4 +1,5 @@
 import datetime
+import os
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
 import reportlab.rl_config
@@ -11,14 +12,17 @@ from jcpl_calendar_generator import JcplCalendarGenerator
 
 reportlab.rl_config.warnOnMissingFontGlyphs = 0
 
-pdfmetrics.registerFont(TTFont('EncodeSansCondensed', 'EncodeSansCondensed-Regular.ttf'))
-pdfmetrics.registerFont(TTFont('EncodeSansCondensedBold', 'EncodeSansCondensed-Bold.ttf'))
-pdfmetrics.registerFont(TTFont('RobotoCondensed', 'RobotoCondensed-Regular.ttf'))
-pdfmetrics.registerFont(TTFont('RobotoCondensedBold', 'RobotoCondensed-Bold.ttf'))
-pdfmetrics.registerFont(TTFont('HelveticaNarrow', 'helvn.ttf'))
-pdfmetrics.registerFont(TTFont('HelveticaNarrowBold', 'helvn_b.ttf'))
-pdfmetrics.registerFont(TTFont('IBM', 'IBMPlexSansCondensed-Regular.ttf'))
-pdfmetrics.registerFont(TTFont('IBMBold', 'IBMPlexSansCondensed-Bold.ttf'))
+# Get the fonts directory relative to this script
+fonts_dir = os.path.join(os.path.dirname(__file__), 'fonts')
+
+pdfmetrics.registerFont(TTFont('EncodeSansCondensed', os.path.join(fonts_dir, 'EncodeSansCondensed-Regular.ttf')))
+pdfmetrics.registerFont(TTFont('EncodeSansCondensedBold', os.path.join(fonts_dir, 'EncodeSansCondensed-Bold.ttf')))
+pdfmetrics.registerFont(TTFont('RobotoCondensed', os.path.join(fonts_dir, 'RobotoCondensed-Regular.ttf')))
+pdfmetrics.registerFont(TTFont('RobotoCondensedBold', os.path.join(fonts_dir, 'RobotoCondensed-Bold.ttf')))
+pdfmetrics.registerFont(TTFont('HelveticaNarrow', os.path.join(fonts_dir, 'helvn.ttf')))
+pdfmetrics.registerFont(TTFont('HelveticaNarrowBold', os.path.join(fonts_dir, 'helvn_b.ttf')))
+pdfmetrics.registerFont(TTFont('IBM', os.path.join(fonts_dir, 'IBMPlexSansCondensed-Regular.ttf')))
+pdfmetrics.registerFont(TTFont('IBMBold', os.path.join(fonts_dir, 'IBMPlexSansCondensed-Bold.ttf')))
 
 
 # --- GUI wiring: instantiate proper class ---
