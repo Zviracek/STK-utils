@@ -130,7 +130,7 @@ class CalendarGenerator:
         except FileNotFoundError:
             self.events = []
 
-    def get_title():
+    def get_title(self):
         return "Kalendář soutěží KSJu PK"
 
     # headers - subclasses may override
@@ -262,7 +262,8 @@ class CalendarGenerator:
                 cats = comp[3]
                 par_style = default_par_style.clone('par_style')
                 if len(comps_in_col) > 1:
-                    par_style.fontSize -= 1
+                    par_style.fontSize -= 2
+                    # TODO: checking for text length might be a better idea
                 bg_color, _, text_color = self.origin_dict.get(origin, (colors.white, '', "#000000"))
                 if '?' in (tags or ''):
                     style.append(('BACKGROUND', (0, i), (0, i), bg_color))
@@ -330,8 +331,8 @@ class CalendarGenerator:
     # header/footer callbacks
     def header_canvas(self, canvas, doc, version, date_str):
         canvas.saveState()
-        canvas.setFont(FONT_NAME, 8)
-        canvas.drawString(30, doc.pagesize[1] - 18, f"Verze: {version}")
+        canvas.setFont(FONT_NAME, 9)
+        canvas.drawString(30, doc.pagesize[1] - 18, f"{self.get_title()} {version}")
         canvas.drawRightString(doc.pagesize[0] - 30, doc.pagesize[1] - 18, date_str)
         canvas.restoreState()
 
