@@ -3,7 +3,7 @@
 This repository contains bunch of utility scripts, that I use to automate most of tasks regarding planning and management of judo competitions. 
 
 Those are:
-- Calendar generation
+- Calendar generation - **No longer maintained under this repository, will be removed soon**
 - shai_utils - Judo shiai importing and creating statistics
 - Generation of ranking list
 - Shiai supporting files
